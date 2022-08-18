@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "melancholy";
+    src: url(../font/melancholy.otf);
+}
+
+@font-face {
+    font-family: "covesBold";
+    src: url(../font/Coves\ Bold.otf);
+}
+
+@font-face {
+    font-family: "coves";
+    src: url(../font/Coves\ Light.otf);
+}
+
+
+
+@font-face {
+    font-family: "moonBold";
+    src: url(../font/Moon\ Bold.otf);
+}
+
+
+*{
+margin: 0;
+padding: 0;
+font-family: "coves", sans-serif;
+}
+
+.my-header{
+    background-color: black;
+    height: 66px;
+    width: 100%;
+    opacity: 0.65;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.my-logo{
+   height: 100%;
+   width: auto;
+   margin-left: 70px;
+   margin-right: 60px;
+   margin-top: 3px;
+}
+
+.nav-container{
+    height: 90%;
+    width: auto;
+}
+
+.my-audio{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.genshin-ref{
+    transition:ease-out 0.3s;
+    color: black;
+    font-weight: bolder;
+    font-size: 1rem;
+    float: right;
+    background-color: #fbcb0c;
+    padding: 15px;
+    margin-top: 7px;
+    margin-right: 70px;
+    cursor: pointer;
+}
+
+.genshin-ref:hover{
+    transition:ease-in 0.3s;
+    background-color: #feb414;
+    box-shadow: 0 1px 1px 0 rgba(255, 203, 82, 0.1);
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid wheat;
+    border-left: 2px solid wheat;
+    color: rgb(63, 9, 9);
+}
