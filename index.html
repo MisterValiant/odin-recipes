@@ -21,13 +21,25 @@
 
     <header class="my-header">
         <nav class="nav-container">
-            <a href="#"><img class="my-logo" src="images/genshin-impact.png" alt="Odin recipes logo" title="Odin recipes logo"></a>
+            <a href="#"><img class="my-logo" src="images/genshin-impact.png" alt="Odin recipes logo"
+                    title="Odin recipes logo"></a>
 
-            <img id="audio-player" onclick="audioController()" class="my-audio" src="images/pause.png" alt="Odin recipes audio" title="Play">
+            <img id="audio-player" onclick="audioController()" class="my-audio" src="images/pause.png"
+                alt="Odin recipes audio" title="Play">
 
-            <a href="https://genshin.hoyoverse.com/en/home">
-                <button type="button" class="genshin-ref"><i class="bi bi-dpad-fill"></i>&nbsp; Inspired by Genshin Impact</button>
-            </a>
+
+            <span class="switch-container">
+                <label id="my-switch" class="switch"><input id="my-checkbox" type="checkbox" onclick="modeCycle()" />
+                    <div class="switch-btn"><i id="switch-icon" class="bi"></i></div>
+                </label>
+            </span>
+
+            <div class="float-nav">
+                <a href="https://genshin.hoyoverse.com/en/" title="Genshin Impact Official">
+                    <button type="button" class="genshin-ref"><i class="bi bi-dpad-fill"></i>&nbsp; Inspired by Genshin
+                        Impact</button>
+                </a>
+            </div>
         </nav>
     </header>
 
