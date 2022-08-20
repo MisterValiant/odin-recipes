@@ -27,11 +27,21 @@
     font-family: "coves", sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+    z-index: 0;
+}
+
+/* Header */
 .my-header {
     background-color: rgba(0, 0, 0, 0.7);
     height: 66px;
     width: 100%;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 2;
 }
 
 .my-logo {
@@ -52,7 +62,7 @@
     cursor: pointer;
 }
 
-.float-nav{
+.float-nav {
     float: right;
 }
 
@@ -61,7 +71,7 @@
     color: black;
     font-weight: bolder;
     font-size: 1rem;
-    background-color: #fbcb0c;
+    background-color: #ffd21d;
     padding: 15px;
     margin-top: 7px;
     margin-right: 70px;
@@ -126,8 +136,107 @@
     transform: translate3d(100%, 0, 0);
 }
 
-.switch-btn i{
+.switch-btn i {
     padding: 3px;
     color: black;
     cursor: pointer;
+}
+
+/* Footer */
+
+.my-footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 66px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.socials {
+    color: white;
+    margin-right: 74px;
+    margin-top: 20px;
+    float: right;
+}
+
+.socials a {
+    text-decoration: none;
+    font-style: normal;
+    color: white;
+    padding: 20px;
+    padding-top: 23px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.socials a:nth-of-type(1) {
+    transition: ease-in-out 0.5s;
+    background-color: black;
+    margin-right: 2px;
+}
+
+.socials a:nth-of-type(1):hover {
+    transition: ease-in-out 0.5s;
+    background-color: rgb(44, 44, 44);
+}
+
+.socials a:nth-of-type(2) {
+    transition: ease-in-out 0.5s;
+    background-color: cyan;
+    color: black;
+    margin-right: 2px;
+}
+
+.socials a:nth-of-type(2):hover {
+    transition: ease-in-out 0.5s;
+    background-color: rgb(86, 255, 255);
+}
+
+.socials a:nth-of-type(3) {
+    transition: ease-in-out 0.5s;
+    background-color: red;
+}
+
+.socials a:nth-of-type(3):hover {
+    transition: ease-in-out 0.5s;
+    background-color: rgb(255, 67, 67);
+}
+
+.creator {
+    display: inline-block;
+    color: white;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.mv {
+    font-style: normal;
+    text-decoration: none;
+    color: wheat;
+}
+
+/* Main */
+
+.main-container {
+    background-image: url(../images/wind-city-day.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 100%;
+}
+
+/* Recipe */
+
+.recipe-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid red;
+    width: 90.5%;
+    height: 70%;
+    z-index: 1;
 }

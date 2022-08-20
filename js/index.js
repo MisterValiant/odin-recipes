@@ -1,6 +1,7 @@
 var audio = new Audio('audio/genshin-bgm.mp3');
 var audioNight = new Audio('audio/genshin-watatsumi.mp3');
 var clickAudio = new Audio('audio/minecraft-click.mp3');
+var clickAudio2 = new Audio('audio/minecraft-click.mp3');
 var muteAudio = new Audio('audio/discord-mute.mp3');
 var currentTimeInHr = (new Date()).getHours();
 
@@ -42,9 +43,7 @@ function playAudio() {
     clickAudio.volume = 0.2;
     clickAudio.play();
 
-    var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = 'images/play.png';
-    audioPlayer.title = 'Pause';
+    playImg();
 }
 
 function pauseAudio() {
@@ -54,9 +53,7 @@ function pauseAudio() {
     audio.pause();
     audioNight.pause();
 
-    var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = 'images/pause.png';
-    audioPlayer.title = 'Play';
+    pauseImg();
 }
 
 function resetAudio() {
@@ -64,6 +61,20 @@ function resetAudio() {
     audio.currentTime = 0;
     audioNight.pause();
     audioNight.currentTime = 0;
+    
+    pauseImg();
+}
+
+function playImg(){
+    var audioPlayer = document.getElementById('audio-player');
+    audioPlayer.src = 'images/play.png';
+    audioPlayer.title = 'Pause audio';
+}
+
+function pauseImg(){
+    var audioPlayer = document.getElementById('audio-player');
+    audioPlayer.src = 'images/pause.png';
+    audioPlayer.title = 'Play audio';
 }
 
 // Day-Night Controls
@@ -89,14 +100,15 @@ function night() {
 }
 
 function modeCycle() {
-    clickAudio.volume = 0.2;
-    clickAudio.play();
-
     if (document.getElementById('my-checkbox').checked) {
         night();
+        clickAudio.volume = 0.2;
+        clickAudio.play();
     } else {
         day();
+        clickAudio2.volume = 0.2;
+        clickAudio2.play(); //Duplicated to allow back-to-back playback
     }
-    
+
     resetAudio();
 }
