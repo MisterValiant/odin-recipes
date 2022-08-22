@@ -22,8 +22,8 @@
 
     <header class="my-header">
         <nav class="nav-container">
-            <a href="#"><img class="my-logo" src="images/logo.png" alt="Odin recipes logo"
-                    title="Odin recipes logo"></a>
+            <a target="_blank" href="https://www.theodinproject.com/"><img class="my-logo" src="images/logo.png" alt="Odin recipes logo"
+                    title="The Odin Project"></a>
 
             <img id="audio-player" onclick="audioController()" class="my-audio" src="images/pause.png"
                 alt="Odin recipes audio" title="Play">
@@ -46,8 +46,28 @@
 
     <main id="main-content" class="main-container">
         <div class="recipe-container">
-            <section>
-                <h1></h1>
+            <section class="main-section">
+                <h1><b>WELCOME TRAVELLER,</b></h1>
+                <br />
+                <p>What are we cooking today?</p>
+                <br />
+
+                <div class="flexbox">
+                    <div class="location-container">
+                        <nav>
+                            <ul>
+                                <li id="tab1" class="selected-li"><button onclick="tab(1)">Mondstadt</button></li>
+                                <li id="tab2"><button onclick="tab(2)">Liyue</button></li>
+                                <li id="tab3"><button onclick="tab(3)">Inazuma</button></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="recipe-details">
+
+                    </div>
+                </div>
+
             </section>
         </div>
     </main>

@@ -1,9 +1,6 @@
+var currentTimeInHr = (new Date()).getHours();
 var audio = new Audio('audio/genshin-bgm.mp3');
 var audioNight = new Audio('audio/genshin-watatsumi.mp3');
-var clickAudio = new Audio('audio/minecraft-click.mp3');
-var clickAudio2 = new Audio('audio/minecraft-click.mp3');
-var muteAudio = new Audio('audio/discord-mute.mp3');
-var currentTimeInHr = (new Date()).getHours();
 
 window.onload = function () {
     if ((currentTimeInHr >= 6 && currentTimeInHr < 18)) {
@@ -14,6 +11,8 @@ window.onload = function () {
         night();
     }
 }
+
+// Audio Controls
 
 function audioController() {
     if (document.getElementById('my-checkbox').checked === false) {
@@ -37,17 +36,19 @@ function audioController() {
     }
 }
 
-// Audio Controls
-
 function playAudio() {
-    clickAudio.volume = 0.2;
+    var clickAudio = new Audio('audio/minecraft-click.mp3');
+    clickAudio.volume = 0.1;
+    clickAudio.currentTime = 0;
     clickAudio.play();
 
     playImg();
 }
 
 function pauseAudio() {
-    muteAudio.volume = 0.2;
+    var muteAudio = new Audio('audio/discord-mute.mp3');
+
+    muteAudio.volume = 0.08;
     muteAudio.play();
 
     audio.pause();
@@ -61,17 +62,17 @@ function resetAudio() {
     audio.currentTime = 0;
     audioNight.pause();
     audioNight.currentTime = 0;
-    
+
     pauseImg();
 }
 
-function playImg(){
+function playImg() {
     var audioPlayer = document.getElementById('audio-player');
     audioPlayer.src = 'images/play.png';
     audioPlayer.title = 'Pause audio';
 }
 
-function pauseImg(){
+function pauseImg() {
     var audioPlayer = document.getElementById('audio-player');
     audioPlayer.src = 'images/pause.png';
     audioPlayer.title = 'Play audio';
@@ -88,9 +89,9 @@ function day() {
     icon.classList.remove("bi-stars");
     icon.classList.add("bi-brightness-alt-high-fill");
 
-    var mondstadtBackground=document.getElementById('main-content');
+    var mondstadtBackground = document.getElementById('main-content');
     mondstadtBackground.style.transition = 'ease-in-out 1.5s';
-    mondstadtBackground.style.backgroundImage='url(images/wind-city-day.png)';
+    mondstadtBackground.style.backgroundImage = 'url(images/wind-city-day.png)';
 }
 
 function night() {
@@ -102,21 +103,42 @@ function night() {
     icon.classList.remove("bi-brightness-alt-high-fill");
     icon.classList.add("bi-stars");
 
-    var mondstadtBackground=document.getElementById('main-content');
+    var mondstadtBackground = document.getElementById('main-content');
     mondstadtBackground.style.transition = 'ease-in-out 1.5s';
-    mondstadtBackground.style.backgroundImage='url(images/wind-city-evening.png)';
+    mondstadtBackground.style.backgroundImage = 'url(images/wind-city-night.png)';
 }
 
 function modeCycle() {
+    var clickAudio = new Audio('audio/minecraft-click.mp3');
+    clickAudio.volume = 0.1;
+    clickAudio.currentTime = 0;
+    clickAudio.play();
+    
     if (document.getElementById('my-checkbox').checked) {
         night();
-        clickAudio.volume = 0.2;
-        clickAudio.play();
     } else {
         day();
-        clickAudio2.volume = 0.2;
-        clickAudio2.play(); //Duplicated to allow back-to-back playback
     }
 
     resetAudio();
+}
+
+// Region Tab Controls
+
+function tab(tabNumber) {
+    var selectedTab = document.querySelector('.location-container li:nth-of-type(' + tabNumber + ')');
+    var originalTabID = document.querySelector('.selected-li').id;
+    originalTabID = originalTabID.replace('tab','');
+
+    document.querySelectorAll('.location-container li').forEach(listItem => {
+        listItem.classList.remove('selected-li');
+    });
+
+    selectedTab.classList.add('selected-li');
+
+    if (audio.paused && audioNight.paused && originalTabID!=tabNumber) {
+        var tpAudio = new Audio('audio/menu.mp3');
+        tpAudio.volume = 0.1;
+        tpAudio.play();
+    }
 }
