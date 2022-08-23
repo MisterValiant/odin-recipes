@@ -22,8 +22,8 @@
 
     <header class="my-header">
         <nav class="nav-container">
-            <a target="_blank" href="https://www.theodinproject.com/"><img class="my-logo" src="images/logo.png" alt="Odin recipes logo"
-                    title="The Odin Project"></a>
+            <a target="_blank" href="https://www.theodinproject.com/"><img class="my-logo" src="images/logo.png"
+                    alt="Odin recipes logo" title="The Odin Project"></a>
 
             <img id="audio-player" onclick="audioController()" class="my-audio" src="images/pause.png"
                 alt="Odin recipes audio" title="Play">
@@ -47,10 +47,18 @@
     <main id="main-content" class="main-container">
         <div class="recipe-container">
             <section class="main-section">
-                <h1><b>WELCOME TRAVELLER,</b></h1>
-                <br />
-                <p>What are we cooking today?</p>
-                <br />
+                <div class="welcome-container">
+                    <h1><b>WELCOME TRAVELLER,</b></h1>
+                    <br />
+                    <p>What are we cooking today?</p>
+                    <br />
+                </div>
+
+                <div class="region-name">
+                    <h3 id="location-name">Stormbearer Mountains</h3>
+                    <p class="world-name"><i class="bi bi-geo-alt"></i> Teyvat</p>
+                    <br/>
+                </div>
 
                 <div class="flexbox">
                     <div class="location-container">

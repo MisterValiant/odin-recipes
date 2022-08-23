@@ -12,6 +12,44 @@ window.onload = function () {
     }
 }
 
+// Background Controls
+
+function backgroundController(tabNumber){
+    var myBackground = document.getElementById('main-content');
+    var regionName = document.getElementById('location-name');
+    var worldName = document.querySelector('.world-name');
+
+    if (!document.getElementById('my-checkbox').checked && tabNumber==1){
+        myBackground.style.backgroundImage = 'url(images/mondstadt-day.png)';
+        regionName.textContent='Stormbearer Mountains';
+        worldName.style.backgroundColor='rgba(0, 228, 170, 0.35)';
+    }else if(document.getElementById('my-checkbox').checked && tabNumber==1){
+        myBackground.style.backgroundImage = 'url(images/mondstadt-night.png)';
+        regionName.textContent='Anemo Archon Statue';
+        worldName.style.backgroundColor='rgba(0, 228, 170, 0.35)';
+    }else if (!document.getElementById('my-checkbox').checked && tabNumber==2){
+        myBackground.style.backgroundImage = 'url(images/liyue-day.png)';
+        regionName.textContent='Wangshu Inn';
+        worldName.style.backgroundColor='rgba(255, 189, 66, 0.747)';
+    }else if(document.getElementById('my-checkbox').checked && tabNumber==2){
+        myBackground.style.backgroundImage = 'url(images/liyue-night.png)';
+        regionName.textContent='Qingce Village';
+        worldName.style.backgroundColor='rgba(255, 189, 66, 0.747)';
+    }else if (!document.getElementById('my-checkbox').checked && tabNumber==3){
+        myBackground.style.backgroundImage = 'url(images/inazuma-day.png)';
+        regionName.textContent='City of Eternity';
+        worldName.style.backgroundColor='rgba(250, 55, 205, 0.597)';
+    }else if(document.getElementById('my-checkbox').checked && tabNumber==3){
+        myBackground.style.backgroundImage = 'url(images/inazuma-night.png)';
+        regionName.textContent='Amakane Island';
+        worldName.style.backgroundColor='rgba(250, 55, 205, 0.597)';
+    }else{
+        myBackground.style.backgroundImage = 'url(images/mondstadt-day.png)';
+        regionName.textContent='Stormbearer Mountains';
+        worldName.style.backgroundColor='rgba(0, 228, 170, 0.35)';
+    }
+}
+
 // Audio Controls
 
 function audioController() {
@@ -21,7 +59,7 @@ function audioController() {
         } else {
             audio.play();
             audio.loop = true;
-            audio.volume = 0.6;
+            audio.volume = 1.0;
             playAudio();
         }
     } else {
@@ -30,7 +68,7 @@ function audioController() {
         } else {
             audioNight.play();
             audioNight.loop = true;
-            audioNight.volume = 0.6;
+            audioNight.volume = 0.5;
             playAudio();
         }
     }
@@ -89,9 +127,7 @@ function day() {
     icon.classList.remove("bi-stars");
     icon.classList.add("bi-brightness-alt-high-fill");
 
-    var mondstadtBackground = document.getElementById('main-content');
-    mondstadtBackground.style.transition = 'ease-in-out 1.5s';
-    mondstadtBackground.style.backgroundImage = 'url(images/wind-city-day.png)';
+    currentSelectedTab()
 }
 
 function night() {
@@ -103,9 +139,7 @@ function night() {
     icon.classList.remove("bi-brightness-alt-high-fill");
     icon.classList.add("bi-stars");
 
-    var mondstadtBackground = document.getElementById('main-content');
-    mondstadtBackground.style.transition = 'ease-in-out 1.5s';
-    mondstadtBackground.style.backgroundImage = 'url(images/wind-city-night.png)';
+    currentSelectedTab()
 }
 
 function modeCycle() {
@@ -113,7 +147,7 @@ function modeCycle() {
     clickAudio.volume = 0.1;
     clickAudio.currentTime = 0;
     clickAudio.play();
-    
+
     if (document.getElementById('my-checkbox').checked) {
         night();
     } else {
@@ -128,7 +162,7 @@ function modeCycle() {
 function tab(tabNumber) {
     var selectedTab = document.querySelector('.location-container li:nth-of-type(' + tabNumber + ')');
     var originalTabID = document.querySelector('.selected-li').id;
-    originalTabID = originalTabID.replace('tab','');
+    originalTabID = originalTabID.replace('tab', '');
 
     document.querySelectorAll('.location-container li').forEach(listItem => {
         listItem.classList.remove('selected-li');
@@ -136,9 +170,17 @@ function tab(tabNumber) {
 
     selectedTab.classList.add('selected-li');
 
-    if (audio.paused && audioNight.paused && originalTabID!=tabNumber) {
+    if (audio.paused && audioNight.paused && originalTabID != tabNumber) {
         var tpAudio = new Audio('audio/menu.mp3');
         tpAudio.volume = 0.1;
         tpAudio.play();
     }
+
+    backgroundController(tabNumber);
+}
+
+function currentSelectedTab(){
+    var currentTab = document.querySelector('.selected-li').id;
+    currentTab = currentTab.replace('tab', '');
+    backgroundController(currentTab);
 }

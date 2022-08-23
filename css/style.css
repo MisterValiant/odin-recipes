@@ -149,7 +149,7 @@ body {
 
 .socials {
     color: white;
-    margin-right: 74px;
+    margin-right: 70px;
     margin-top: 20px;
     float: right;
 }
@@ -214,12 +214,16 @@ body {
 /* Main */
 
 .main-container {
-    background-image: url(../images/wind-city-day.png);
+    background-image: url(../images/mondstadt-day.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: auto;
     height: 100%;
+}
+
+#main-content{
+    transition: all .5s ease-in-out;
 }
 
 .recipe-container {
@@ -256,7 +260,7 @@ body {
 }
 
 .recipe-details {
-    /* border: 2px solid blue; */
+    
     width: 88%;
 }
 
@@ -314,6 +318,34 @@ body {
     border: 1px solid rgba(3, 208, 170, 0.15);
     color: black;
     font-size: 16.4px;
-    text-indent: 35px;
+    text-indent: 33px;
     background-color: white;
+}
+
+.welcome-container{
+    display: inline-block;
+}
+
+.region-name{
+    transition: ease-in-out 0.5s;
+    float: right ;
+    display: inline-block;
+    text-align: center;
+    align-items: center;
+}
+
+.world-name{
+    transition: ease-in-out 0.5s;
+    margin-top: 8px;
+    background-color: rgba(0, 228, 170, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.27);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 3px;
+}
+
+#location-name h3{
+    transition: ease-in-out 0.5s;
 }
