@@ -43,10 +43,18 @@ function backgroundController(tabNumber){
         myBackground.style.backgroundImage = 'url(images/inazuma-night.png)';
         regionName.textContent='Amakane Island';
         worldName.style.backgroundColor='rgba(250, 55, 205, 0.597)';
+    }else if(!document.getElementById('my-checkbox').checked && tabNumber==4){
+        myBackground.style.backgroundImage = 'url(images/more-day.png)';
+        regionName.textContent='Liyue Harbour Oceanview';
+        worldName.style.backgroundColor='rgba(250, 55, 205, 0.597)';
+    }else if(document.getElementById('my-checkbox').checked && tabNumber==4){
+        myBackground.style.backgroundImage = 'url(images/more-night.png)';
+        regionName.textContent='Qingyun Peak';
+        worldName.style.backgroundColor='white';
     }else{
         myBackground.style.backgroundImage = 'url(images/mondstadt-day.png)';
         regionName.textContent='Stormbearer Mountains';
-        worldName.style.backgroundColor='rgba(0, 228, 170, 0.35)';
+        worldName.style.backgroundColor='white';
     }
 }
 

@@ -222,7 +222,7 @@ body {
     height: 100%;
 }
 
-#main-content{
+#main-content {
     transition: all .5s ease-in-out;
 }
 
@@ -257,11 +257,7 @@ body {
 .flexbox {
     display: flex;
     height: 80%;
-}
-
-.recipe-details {
-    
-    width: 88%;
+    margin-top: 13px;
 }
 
 .location-container {
@@ -271,8 +267,11 @@ body {
 
 .location-container li {
     list-style: url(../images/list-style.png);
-    margin-top: 30px;
     background-size: 10px;
+}
+
+.location-container li:nth-of-type(n+2){
+    margin-top: 30px;
 }
 
 .location-container button {
@@ -304,7 +303,7 @@ body {
     border: none !important;
 }
 
-.location-container .selected-li{
+.location-container .selected-li {
     list-style: url(../images/list-style-selected.png);
 }
 
@@ -322,19 +321,20 @@ body {
     background-color: white;
 }
 
-.welcome-container{
+.welcome-container {
     display: inline-block;
 }
 
-.region-name{
+.region-name {
     transition: ease-in-out 0.5s;
-    float: right ;
-    display: inline-block;
+    float: right;
     text-align: center;
-    align-items: center;
+    width: 190px;
 }
 
-.world-name{
+.world-name {
+    display: inline-block;
+    width: 100px;
     transition: ease-in-out 0.5s;
     margin-top: 8px;
     background-color: rgba(0, 228, 170, 0.35);
@@ -346,6 +346,48 @@ body {
     padding: 3px;
 }
 
-#location-name h3{
-    transition: ease-in-out 0.5s;
+.recipe-details {
+    width: 100%;
+    height: auto;
+    margin-left: 70px;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(128, 128, 128, 0.307);
+    border-radius: 10px;
+}
+
+.recipe-background{
+    /* background-image: url(../images/background-pattern.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    opacity: 0.08; */
+    width: auto;
+    height: 100%;
+}
+
+.recipe-top{
+    width: auto;
+    height: 60%;
+    display: flex;
+}
+
+.recipe-bottom{
+    width: auto;
+    height: 40%;
+    background-color: yellowgreen;
+}
+
+.recipe-image{
+    width: 100%;
+    height: auto;
+    background-color: #ffd21d;
+}
+
+.recipe-description{
+    width: 100%;
+    height: auto;
+    background-color: aquamarine;
 }
