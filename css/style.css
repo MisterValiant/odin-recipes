@@ -270,14 +270,13 @@ body {
     background-size: 10px;
 }
 
-.location-container li:nth-of-type(n+2){
+.location-container li:nth-of-type(n+2) {
     margin-top: 30px;
 }
 
 .location-container button {
     transition: ease-in-out 0.5s;
     border: none;
-    outline: none;
     color: white;
     background: rgba(0, 0, 0, 0.55);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -295,11 +294,9 @@ body {
 
 .location-container button:focus {
     border: none;
-    outline: none;
 }
 
 .location-container button:focus {
-    outline: none !important;
     border: none !important;
 }
 
@@ -358,7 +355,7 @@ body {
     border-radius: 10px;
 }
 
-.recipe-background{
+.recipe-background {
     /* background-image: url(../images/background-pattern.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -368,26 +365,88 @@ body {
     height: 100%;
 }
 
-.recipe-top{
+.recipe-top {
     width: auto;
     height: 60%;
     display: flex;
 }
 
-.recipe-bottom{
+.recipe-bottom {
     width: auto;
     height: 40%;
-    background-color: yellowgreen;
 }
 
-.recipe-image{
+.recipe-image {
     width: 100%;
     height: auto;
     background-color: #ffd21d;
 }
 
-.recipe-description{
+.recipe-description {
     width: 100%;
     height: auto;
     background-color: aquamarine;
+}
+
+.scroll-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+.scroll-menu ul {
+    position: absolute;
+    transition: ease-in-out .5s;
+}
+
+.scroll-menu li {
+    transition: ease-in-out 0.43s;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 10px;
+}
+
+.scroll-menu button {
+    padding: 14px;
+    border: none;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+}
+
+.scroll-menu li:nth-of-type(n+2){
+    margin-left: 45px;
+}
+
+.scroll-menu img{
+    width: 70px;
+    height: auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.337);
+    margin-bottom: 6px;
+}
+
+.scroll-menu .selected-dish{
+    background-color: rgba(255, 255, 255, 0.827);
+}
+
+.selected-dish img{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.337);
+}
+
+.selected-dish label{
+    color: black;
+    font-weight: bold;
+}
+
+.scroll-menu li:hover:not(.selected-dish){
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+}
+
+.selected-dish:hover{
+    background-color: rgba(255, 255, 255, 0.89);
 }

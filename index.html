@@ -36,10 +36,10 @@
             </span>
 
             <div class="float-nav">
-                <a id="genshin-btn" href="https://genshin.hoyoverse.com/en/" title="Genshin Impact Official">
-                    <button type="button" class="genshin-ref"><i class="bi bi-dpad-fill"></i>&nbsp; Inspired by Genshin
+
+                    <button title="Genshin Impact Official" onclick="window.open('https://genshin.hoyoverse.com/en/')" type="button" class="genshin-ref"><i class="bi bi-dpad-fill"></i>&nbsp; Inspired by Genshin
                         Impact</button>
-                </a>
+                
             </div>
         </nav>
     </header>
@@ -86,7 +86,31 @@
                             </div>
 
                             <div class="recipe-bottom">
+                                <div class="scroll-menu">
+                                    <ul id="mondstadt-recipe">
+                                        <li id="dish1" class="selected-dish"><button onclick="mondstadtDish(1)"><img src="./images/recipes/mondstdat/pizza.png" alt="Mondstadt Mushroom Pizza"><br/><label>Pizza</label></button></li>
+                                        <li id="dish2"><button onclick="mondstadtDish(2)"><img src="./images/recipes/mondstdat/hash-brown.png" alt="Mondstadt Hash Brown"><br/><label>Hash Brown</label></button></li>
+                                        <li id="dish3"><button  onclick="mondstadtDish(3)"><img src="./images/recipes/mondstdat/goulash.png" alt="Mondstadt Hash Brown"><br/><label>Goulash</label></button></li>
+                                        <li id="dish4"><button onclick="mondstadtDish(4)"><img src="./images/recipes/mondstdat/Grilled_Fish.png" alt="Mondstadt Grilled Fish"><br/><label>Grilled Fish</label></button></li>
+                                        <li id="dish5"><button onclick="mondstadtDish(5)"><img src="./images/recipes/mondstdat/Barbatos_Ratatouille.png" alt="Mondstadt Barbatos Ratatouille"><br/><label>Ratatouille</label></button></li>
+                                    </ul>
 
+                                    <ul id="liyue-recipe">
+                                        <li><button onclick="hello('A')">Recipe A</button></li>
+                                        <li><button onclick="hello('B')">Recipe B</button></li>
+                                        <li><button>Recipe C</button></li>
+                                        <li><button>Recipe D</button></li>
+                                        <li><button>Recipe E</button></li>
+                                    </ul>
+                                    
+                                    <ul id="inazuma-recipe">
+                                        <li><button onclick="hello('I')">Recipe I</button></li>
+                                        <li><button onclick="hello('II')">Recipe II</button></li>
+                                        <li><button>Recipe III</button></li>
+                                        <li><button>Recipe IV</button></li>
+                                        <li><button>Recipe V</button></li>
+                                    </ul>
+                                </div>
                             </div>
 
                         </div>
@@ -98,6 +122,9 @@
     </main>
 
     <footer class="my-footer">
+        <p class="creator">Made with ❤️ by <a target="_blank" href="https://github.com/MisterValiant"
+            class="mv">MisterValiant</a></p>
+
         <div class="socials">
             <a title="Github" target="_blank" href="https://github.com/MisterValiant"><i class="bi bi-github"></i></a>
             <a title="Twitter" target="_blank" href="https://twitter.com/Mist3rValiant"><i
@@ -105,9 +132,6 @@
             <a title="Youtube" target="_blank" href="https://www.youtube.com/c/MisterValiant"><i
                     class="bi bi-youtube"></i></a>
         </div>
-
-        <p class="creator">Made with ❤️ by <a target="_blank" href="https://github.com/MisterValiant"
-                class="mv">MisterValiant</a></p>
     </footer>
 
     <script src="js/index.js"></script>
