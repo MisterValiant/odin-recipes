@@ -402,7 +402,3 @@ function inazumaDish(dishNumber) {
     myDish.style.opacity = 1;
     myDish.style.zIndex = 1;
 }
-
-function clicking() {
-    console.log('clik')
-}

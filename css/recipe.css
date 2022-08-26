@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "coves";
+    src: url(../font/Coves-Light.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "coves", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    z-index: 0;
+}
+
+/* Header */
+
+.my-header {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 66px;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.my-logo {
+    height: 100%;
+    width: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 3px;
+}
+
+.nav-container {
+    height: 90%;
+    width: auto;
+}
+
+.my-audio {
+    margin-bottom: 9px;
+    cursor: pointer;
+}
+
+.float-nav {
+    float: right;
+}
+
+.genshin-ref {
+    transition: ease-out 0.3s;
+    color: black;
+    font-weight: bolder;
+    font-size: 1rem;
+    background-color: #ffd21d;
+    padding: 15px;
+    margin-top: 7px;
+    margin-right: 70px;
+    cursor: pointer;
+}
+
+.genshin-ref:hover {
+    transition: ease-in 0.3s;
+    background-color: #feb414;
+    box-shadow: 0 1px 1px 0 rgba(255, 203, 82, 0.1);
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    border-top: 2px solid wheat;
+    border-left: 2px solid wheat;
+    color: rgb(63, 9, 9);
+}
+
+/** Switch
+   -------------------------------------*/
+.switch-container {
+    position: absolute;
+    top: 20.5px;
+    left: 356px;
+    margin: auto;
+    display: inline-block;
+    color: white;
+}
+
+.switch input {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch {
+    display: inline-block;
+    font-size: 20px;
+    /* 1 */
+    height: 1.3em;
+    width: 2.3em;
+    background: #87CEEB;
+    border-radius: 1em;
+}
+
+.switch div {
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 1em;
+    background: #FFF;
+    box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.3);
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    transition: all 300ms;
+}
+
+.switch input:checked+div {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.switch-btn i {
+    padding: 3px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Footer */
+
+.my-footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 66px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+.socials {
+    color: white;
+    margin-right: 70px;
+    margin-top: 20px;
+    float: right;
+}
+
+.socials a {
+    text-decoration: none;
+    font-style: normal;
+    color: white;
+    padding: 20px;
+    padding-top: 23px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.socials a:nth-of-type(1) {
+    transition: ease-in-out 0.5s;
+    background-color: black;
+    margin-right: 2px;
+}
+
+.socials a:nth-of-type(1):hover {
+    transition: ease-in-out 0.5s;
+    background-color: rgb(24, 24, 24);
+}
+
+.socials a:nth-of-type(2) {
+    transition: ease-in-out 0.5s;
+    background-color: cyan;
+    color: black;
+    margin-right: 2px;
+}
+
+.socials a:nth-of-type(2):hover {
+    transition: ease-in-out 0.5s;
+    background-color: rgb(86, 255, 255);
+}
+
+.socials a:nth-of-type(3) {
+    transition: ease-in-out 0.5s;
+    background-color: red;
+}
+
+.socials a:nth-of-type(3):hover {
+    transition: ease-in-out 0.5s;
+    background-color: rgb(255, 67, 67);
+}
+
+.creator {
+    display: inline-block;
+    color: white;
+    margin-top: 20px;
+    margin-left: 70px;
+}
+
+.mv {
+    font-style: normal;
+    text-decoration: none;
+    color: wheat;
+}
