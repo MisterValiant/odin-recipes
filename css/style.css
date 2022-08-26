@@ -367,7 +367,7 @@ body {
 
 .recipe-top {
     width: auto;
-    height: 60%;
+    height: 56%;
     display: flex;
 }
 
@@ -379,13 +379,12 @@ body {
 .recipe-image {
     width: 100%;
     height: auto;
-    background-color: #ffd21d;
 }
 
 .recipe-description {
     width: 100%;
     height: auto;
-    background-color: aquamarine;
+    color: white;
 }
 
 .scroll-menu {
@@ -418,35 +417,110 @@ body {
     cursor: pointer;
 }
 
-.scroll-menu li:nth-of-type(n+2){
+.scroll-menu li:nth-of-type(n+2) {
     margin-left: 45px;
 }
 
-.scroll-menu img{
+.scroll-menu img {
     width: 70px;
     height: auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.337);
     margin-bottom: 6px;
 }
 
-.scroll-menu .selected-dish{
+.scroll-menu .selected-dish {
     background-color: rgba(255, 255, 255, 0.827);
 }
 
-.selected-dish img{
+.selected-dish img {
     border-bottom: 1px solid rgba(0, 0, 0, 0.337);
 }
 
-.selected-dish label{
+.selected-dish label {
     color: black;
     font-weight: bold;
 }
 
-.scroll-menu li:hover:not(.selected-dish){
+.scroll-menu li:hover:not(.selected-dish) {
     background: rgba(0, 0, 0, 0.45);
     color: white;
 }
 
-.selected-dish:hover{
+.selected-dish:hover {
     background-color: rgba(255, 255, 255, 0.89);
+}
+
+.mondstadt-images, .liyue-images, .inazuma-images {
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+}
+
+.image-container img {
+    width: 80%;
+    height: auto;
+    margin-top: 3px;
+}
+
+.mondstadt-dishes, .liyue-dishes, .inazuma-dishes {
+    position: absolute;
+}
+
+.description-container {
+    display: flex;
+    justify-content: left;
+    height: 100%;
+}
+
+.description-container p {
+    margin-top: 22px;
+    width: 50%;
+    height: auto;
+}
+
+.dish-description span{
+    position: absolute;
+}
+
+.description-container b {
+    font-size: 25px;
+}
+
+.description-container button {
+    transition: .5s ease-in-out;
+    padding: 5px;
+    border-radius: 30px;
+    border: none;
+    background-color: #76d2f7;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.description-container button:hover {
+    background-color: #87CEEB;
+}
+
+.recipe-break {
+    width: 100%;
+    height: 5.3%;
+    display: flex;
+    justify-content: center;
+}
+
+.recipe-break div {
+    background-color: rgba(255, 255, 255, 0.09);
+    height: 6%;
+    width: 70%;
+}
+
+.mondstadt-dishes:nth-of-type(n+2), .liyue-dishes:nth-of-type(n), .inazuma-dishes:nth-of-type(n) {
+    transition: .25s ease-in-out;
+    opacity: 0;
+    z-index: -1;
+}
+
+.recipe-bottom button label{
+    cursor: pointer;
 }

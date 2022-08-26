@@ -102,12 +102,6 @@ function recipeController(tabNumber) {
 
 }
 
-function hello(hell) {
-    console.log(hell);
-}
-
-
-
 // Audio Controls
 
 function audioController() {
@@ -232,6 +226,8 @@ function tab(tabNumber) {
         var tpAudio = new Audio('audio/menu.mp3');
         tpAudio.volume = 0.1;
         tpAudio.play();
+
+        dishController(tabNumber);
     }
 
     backgroundController(tabNumber);
@@ -244,6 +240,66 @@ function currentSelectedTab() {
 }
 
 // Dish Controls
+
+function dishController(tabNumber) {
+    resetDish();
+
+    if (tabNumber == 1) {
+        var dishImage = document.querySelector('.mondstadt-images .mondstadt-dishes:nth-of-type(' + 1 + ')');
+        dishImage.style.opacity = 1;
+        dishImage.style.zIndex = 1;
+        var myDish = document.querySelector('.mondstadt-description .mondstadt-dishes:nth-of-type(' + 1 + ')');
+        myDish.style.opacity = 1;
+        myDish.style.zIndex = 1;
+
+    }else if (tabNumber==2){
+        var dishImage = document.querySelector('.liyue-images .liyue-dishes:nth-of-type(' + 1 + ')');
+        dishImage.style.opacity = 1;
+        dishImage.style.zIndex = 1;
+        var myDish = document.querySelector('.liyue-description .liyue-dishes:nth-of-type(' + 1 + ')');
+        myDish.style.opacity = 1;
+        myDish.style.zIndex = 1;
+
+    }else if (tabNumber==3){
+        var dishImage = document.querySelector('.inazuma-images .inazuma-dishes:nth-of-type(' + 1 + ')');
+        dishImage.style.opacity = 1;
+        dishImage.style.zIndex = 1;
+        var myDish = document.querySelector('.inazuma-description .inazuma-dishes:nth-of-type(' + 1 + ')');
+        myDish.style.opacity = 1;
+        myDish.style.zIndex = 1;
+
+    }
+}
+
+function resetDish(){
+    document.querySelectorAll('.mondstadt-dishes').forEach(listItem => {
+        listItem.style.opacity = 0;
+        listItem.style.zIndex = -1;
+    });
+    document.querySelectorAll('.liyue-dishes').forEach(listItem => {
+        listItem.style.opacity = 0;
+        listItem.style.zIndex = -1;
+    });
+    document.querySelectorAll('.inazuma-dishes').forEach(listItem => {
+        listItem.style.opacity = 0;
+        listItem.style.zIndex = -1;
+    });
+
+    document.querySelectorAll('#mondstadt-recipe li').forEach(listItem => {
+        listItem.classList.remove('selected-dish');
+    });
+    document.querySelectorAll('#liyue-recipe li').forEach(listItem => {
+        listItem.classList.remove('selected-dish');
+    });
+    document.querySelectorAll('#inazuma-recipe li').forEach(listItem => {
+        listItem.classList.remove('selected-dish');
+    });
+
+    document.querySelector('#mondstadt-recipe li:nth-of-type(1)').classList.add('selected-dish');
+    document.querySelector('#liyue-recipe li:nth-of-type(1)').classList.add('selected-dish');
+    document.querySelector('#inazuma-recipe li:nth-of-type(1)').classList.add('selected-dish');
+    
+}
 
 function mondstadtDish(dishNumber) {
     var selectedDish = document.querySelector('#mondstadt-recipe li:nth-of-type(' + dishNumber + ')');
@@ -261,4 +317,80 @@ function mondstadtDish(dishNumber) {
         dishAudio.volume = 0.08;
         dishAudio.play();
     }
+
+    document.querySelectorAll('.mondstadt-dishes').forEach(listItem => {
+        listItem.style.opacity = 0;
+        listItem.style.zIndex = -1;
+    });
+
+    var dishImage = document.querySelector('.mondstadt-dishes:nth-of-type(' + dishNumber + ')');
+    dishImage.style.opacity = 1;
+    dishImage.style.zIndex = 1;
+    var myDish = document.querySelector('.mondstadt-description .mondstadt-dishes:nth-of-type(' + dishNumber + ')');
+    myDish.style.opacity = 1;
+    myDish.style.zIndex = 1;
+}
+
+function liyueDish(dishNumber) {
+    var selectedDish = document.querySelector('#liyue-recipe li:nth-of-type(' + dishNumber + ')');
+    var originalDishID = document.querySelector('#liyue-recipe .selected-dish').id;
+    originalDishID = originalDishID.replace('dish', '');
+
+    document.querySelectorAll('#liyue-recipe li').forEach(listItem => {
+        listItem.classList.remove('selected-dish');
+    });
+
+    selectedDish.classList.add('selected-dish');
+
+    if (audio.paused && audioNight.paused && originalDishID != dishNumber) {
+        var dishAudio = new Audio('audio/select-dish.wav');
+        dishAudio.volume = 0.08;
+        dishAudio.play();
+    }
+
+    document.querySelectorAll('.liyue-dishes').forEach(listItem => {
+        listItem.style.opacity = 0;
+        listItem.style.zIndex = -1;
+    });
+
+    var dishImage = document.querySelector('.liyue-dishes:nth-of-type(' + dishNumber + ')');
+    dishImage.style.opacity = 1;
+    dishImage.style.zIndex = 1;
+    var myDish = document.querySelector('.liyue-description .liyue-dishes:nth-of-type(' + dishNumber + ')');
+    myDish.style.opacity = 1;
+    myDish.style.zIndex = 1;
+}
+
+function inazumaDish(dishNumber) {
+    var selectedDish = document.querySelector('#inazuma-recipe li:nth-of-type(' + dishNumber + ')');
+    var originalDishID = document.querySelector('#inazuma-recipe .selected-dish').id;
+    originalDishID = originalDishID.replace('dish', '');
+
+    document.querySelectorAll('#inazuma-recipe li').forEach(listItem => {
+        listItem.classList.remove('selected-dish');
+    });
+
+    selectedDish.classList.add('selected-dish');
+
+    if (audio.paused && audioNight.paused && originalDishID != dishNumber) {
+        var dishAudio = new Audio('audio/select-dish.wav');
+        dishAudio.volume = 0.08;
+        dishAudio.play();
+    }
+
+    document.querySelectorAll('.inazuma-dishes').forEach(listItem => {
+        listItem.style.opacity = 0;
+        listItem.style.zIndex = -1;
+    });
+
+    var dishImage = document.querySelector('.inazuma-dishes:nth-of-type(' + dishNumber + ')');
+    dishImage.style.opacity = 1;
+    dishImage.style.zIndex = 1;
+    var myDish = document.querySelector('.inazuma-description .inazuma-dishes:nth-of-type(' + dishNumber + ')');
+    myDish.style.opacity = 1;
+    myDish.style.zIndex = 1;
+}
+
+function clicking() {
+    console.log('clik')
 }
