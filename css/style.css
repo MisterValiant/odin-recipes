@@ -1,21 +1,6 @@
 @font-face {
-    font-family: "covesBold";
-    src: url(../font/Coves\ Bold.otf);
-}
-
-@font-face {
     font-family: "coves";
-    src: url(../font/Coves\ Light.otf);
-}
-
-@font-face {
-    font-family: "moonBold";
-    src: url(../font/Moon\ Bold.otf);
-}
-
-@font-face {
-    font-family: "linuxAbs";
-    src: url(../font/LinLibertine_aBS.ttf);
+    src: url(../font/Coves-Light.otf);
 }
 
 * {
@@ -450,7 +435,10 @@ body {
     background-color: rgba(255, 255, 255, 0.89);
 }
 
-.mondstadt-images, .liyue-images, .inazuma-images {
+.mondstadt-images,
+.liyue-images,
+.inazuma-images,
+.more-images {
     display: flex;
     justify-content: right;
     margin-right: 10px;
@@ -462,7 +450,10 @@ body {
     margin-top: 3px;
 }
 
-.mondstadt-dishes, .liyue-dishes, .inazuma-dishes {
+.mondstadt-dishes,
+.liyue-dishes,
+.inazuma-dishes,
+.more-dishes {
     position: absolute;
 }
 
@@ -478,7 +469,7 @@ body {
     height: auto;
 }
 
-.dish-description span{
+.dish-description span {
     position: absolute;
 }
 
@@ -515,12 +506,35 @@ body {
     width: 70%;
 }
 
-.mondstadt-dishes:nth-of-type(n+2), .liyue-dishes:nth-of-type(n), .inazuma-dishes:nth-of-type(n) {
+.mondstadt-dishes:nth-of-type(n+2),
+.liyue-dishes:nth-of-type(n),
+.inazuma-dishes:nth-of-type(n),
+.more-dishes {
     transition: .25s ease-in-out;
     opacity: 0;
     z-index: -1;
 }
 
-.recipe-bottom button label{
+.recipe-bottom button label {
     cursor: pointer;
+}
+
+.more-dishes {
+    color: white;
+    font-size: 60px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.more-description .more-dishes{
+    margin-right: 5px;
+}
+
+.more-images .more-dishes {
+    margin-top: 22px;
+    width: 50%;
+    height: auto;
+    text-align: right;
+    margin-left: 5px;
 }

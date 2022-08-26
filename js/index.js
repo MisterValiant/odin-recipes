@@ -46,7 +46,7 @@ function backgroundController(tabNumber) {
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 4) {
         myBackground.style.backgroundImage = 'url(images/more-day.png)';
         regionName.textContent = 'Liyue Harbour Oceanview';
-        worldName.style.backgroundColor = 'rgba(250, 55, 205, 0.597)';
+        worldName.style.backgroundColor = 'white';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 4) {
         myBackground.style.backgroundImage = 'url(images/more-night.png)';
         regionName.textContent = 'Qingyun Peak';
@@ -252,7 +252,7 @@ function dishController(tabNumber) {
         myDish.style.opacity = 1;
         myDish.style.zIndex = 1;
 
-    }else if (tabNumber==2){
+    } else if (tabNumber == 2) {
         var dishImage = document.querySelector('.liyue-images .liyue-dishes:nth-of-type(' + 1 + ')');
         dishImage.style.opacity = 1;
         dishImage.style.zIndex = 1;
@@ -260,7 +260,7 @@ function dishController(tabNumber) {
         myDish.style.opacity = 1;
         myDish.style.zIndex = 1;
 
-    }else if (tabNumber==3){
+    } else if (tabNumber == 3) {
         var dishImage = document.querySelector('.inazuma-images .inazuma-dishes:nth-of-type(' + 1 + ')');
         dishImage.style.opacity = 1;
         dishImage.style.zIndex = 1;
@@ -268,10 +268,17 @@ function dishController(tabNumber) {
         myDish.style.opacity = 1;
         myDish.style.zIndex = 1;
 
+    } else if (tabNumber == 4) {
+        var dishImage = document.querySelector('.more-images .more-dishes');
+        dishImage.style.opacity = 1;
+        dishImage.style.zIndex = 1;
+        var myDish = document.querySelector('.more-description .more-dishes');
+        myDish.style.opacity = 1;
+        myDish.style.zIndex = 1;
     }
 }
 
-function resetDish(){
+function resetDish() {
     document.querySelectorAll('.mondstadt-dishes').forEach(listItem => {
         listItem.style.opacity = 0;
         listItem.style.zIndex = -1;
@@ -284,6 +291,11 @@ function resetDish(){
         listItem.style.opacity = 0;
         listItem.style.zIndex = -1;
     });
+    document.querySelectorAll('.more-dishes').forEach(listItem => {
+        listItem.style.opacity = 0;
+        listItem.style.zIndex = -1;
+    });
+
 
     document.querySelectorAll('#mondstadt-recipe li').forEach(listItem => {
         listItem.classList.remove('selected-dish');
@@ -298,7 +310,7 @@ function resetDish(){
     document.querySelector('#mondstadt-recipe li:nth-of-type(1)').classList.add('selected-dish');
     document.querySelector('#liyue-recipe li:nth-of-type(1)').classList.add('selected-dish');
     document.querySelector('#inazuma-recipe li:nth-of-type(1)').classList.add('selected-dish');
-    
+
 }
 
 function mondstadtDish(dishNumber) {
