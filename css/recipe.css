@@ -195,3 +195,93 @@ body {
     text-decoration: none;
     color: wheat;
 }
+
+#main-content-mondstadt, #main-content-liyue, #main-content-inazuma {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    height: 100%;
+}
+
+#main-content-mondstadt{
+    background-image: url(../images/inazuma-recipe-day.png);
+}
+
+#main-content-liyue{
+    background-image: url(../images/liyue-recipe-day.png);
+}
+
+#main-content-inazuma{
+    background-image: url(../images/inazuma-recipe-day.png);
+}
+
+.main-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 70%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(24, 30, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: black;
+}
+
+.card-one, .card-two{
+    position: absolute;
+    width: 240px;
+    height: 62%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(24, 30, 107, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: black;
+}
+
+.card-one{
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.card-two{
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.arrow-one, .arrow-two{
+    transition: ease-in-out .5s;
+    position: absolute;
+    display: inline-block;
+    z-index: 2;
+    color: rgba(255, 255, 255, 0.846);
+    font-size: 43px;
+    cursor: pointer;
+}
+
+.arrow-one{
+    top: 50%;
+    left: 12.5%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-two{
+    top: 50%;
+    left: 87.5%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-one:hover, .arrow-two:hover{
+    color: white;
+}

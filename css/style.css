@@ -473,7 +473,7 @@ body {
     position: absolute;
 }
 
-.description-container b {
+.description-container strong {
     font-size: 25px;
 }
 

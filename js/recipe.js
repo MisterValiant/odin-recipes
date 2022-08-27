@@ -88,8 +88,6 @@ function day() {
     var icon = document.getElementById('switch-icon');
     icon.classList.remove("bi-stars");
     icon.classList.add("bi-brightness-alt-high-fill");
-
-    currentSelectedTab()
 }
 
 function night() {
@@ -100,8 +98,6 @@ function night() {
     var icon = document.getElementById('switch-icon');
     icon.classList.remove("bi-brightness-alt-high-fill");
     icon.classList.add("bi-stars");
-
-    currentSelectedTab()
 }
 
 function modeCycle() {
