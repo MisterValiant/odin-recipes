@@ -196,7 +196,9 @@ body {
     color: wheat;
 }
 
-#main-content-mondstadt, #main-content-liyue, #main-content-inazuma {
+#main-content-mondstadt,
+#main-content-liyue,
+#main-content-inazuma {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -204,15 +206,15 @@ body {
     height: 100%;
 }
 
-#main-content-mondstadt{
+#main-content-mondstadt {
     background-image: url(../images/mondstadt-recipe-day.png);
 }
 
-#main-content-liyue{
+#main-content-liyue {
     background-image: url(../images/liyue-recipe-day.png);
 }
 
-#main-content-inazuma{
+#main-content-inazuma {
     background-image: url(../images/inazuma-recipe-day.png);
 }
 
@@ -222,14 +224,15 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(calc(-50% - .4px), calc(-50% - .4px));
     width: 300px;
     height: 70%;
     z-index: 1;
     color: black;
 }
 
-.card-one, .card-two{
+.card-one,
+.card-two {
     position: absolute;
     width: 240px;
     height: 62%;
@@ -237,20 +240,20 @@ body {
     color: black;
 }
 
-.card-one{
+.card-one {
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
 }
 
-.card-two{
+.card-two {
     top: 50%;
     left: 75%;
     transform: translate(-50%, -50%);
     z-index: 0;
 }
 
-.glassmorphism{
+.glassmorphism {
     padding: 10px;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(24, 30, 107, 0.37);
@@ -261,7 +264,8 @@ body {
     height: 95.4%;
 }
 
-.arrow-one, .arrow-two{
+.arrow-one,
+.arrow-two {
     transition: ease-in-out .5s;
     position: absolute;
     display: inline-block;
@@ -271,63 +275,74 @@ body {
     cursor: pointer;
 }
 
-.arrow-one{
+.arrow-one {
     top: 50%;
     left: 12.5%;
     transform: translate(-50%, -50%);
 }
 
-.arrow-two{
+.arrow-two {
     top: 50%;
     left: 87.5%;
     transform: translate(-50%, -50%);
 }
 
-.arrow-one:hover, .arrow-two:hover{
+.arrow-one:hover,
+.arrow-two:hover {
     color: white;
 }
 
 /* Main card */
-
-.card-top{
-display: flex;
-align-items: center;
-justify-content: center;
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.main-card .card-top img{
+.main-card .card-top img {
     width: 60%;
 }
 
-.dish-name{
+.dish-name {
     text-align: center;
 }
 
-.main-card .dish-name{
+.main-card .dish-name {
     font-size: x-large;
 }
 
-.dish-type{
+.dish-type {
     float: left;
 }
 
-.main-card .dish-type{
+.main-card .dish-type {
     margin-right: 10px;
 }
 
-.main-card .type-name, .main-card .dish-type p, .main-card .dish-description{
+.main-card .type-name,
+.main-card .dish-type p,
+.main-card .dish-description {
     margin-top: 5px;
 }
 
-.type-img{
+.type-img {
     float: left;
+    width: 25px;
 }
 
-.main-card .type-img{
+.main-card .type-img {
     margin-right: 10px;
 }
 
-.main-card .hr-break{
+.main-card .type-img:not(.cold-resistance){
+    margin-top: 3px;
+}
+
+.card-one .type-img .cold-resistance, .card-two .type-img .cold-resistance{
+    margin-bottom: 5px;
+}
+
+.main-card .hr-break {
     margin-bottom: 15px;
     margin-top: 15px;
     height: 1px;
@@ -335,29 +350,98 @@ justify-content: center;
     border-radius: 30px;
 }
 
-.main-card .dish-ingredients{
+.main-card .dish-ingredients {
     width: 95%;
     margin-top: 10px;
 }
 
-.ingredient-container{
+.ingredient-container {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.main-card .recipe-btn{
+.main-card .recipe-btn {
     margin-top: 17px;
-    margin-left: 5px;
 }
 
-.recipe-btn{
+.recipe-btn {
     background-color: black;
     border: 1px solid rgb(102, 102, 102);
     color: white;
     cursor: pointer;
     padding: 4px;
     border-radius: 20px;
-    padding-left: 7px;
-    padding-right: 7px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-card button, .card-one button, .card-two button{
+    width: 70%;
+}
+
+/* Side cards */
+
+
+.card-one .card-top img,
+.card-two .card-top img {
+    width: 52%;
+}
+
+.dish-name {
+    text-align: center;
+}
+
+.card-one .dish-name,
+.card-two .dish-name {
+    font-size: large;
+}
+
+.card-one .dish-type,
+.card-two .dish-type {
+    margin-right: 8px;
+}
+
+.card-one .type-name,
+.card-one .dish-type p,
+.card-one .dish-description,
+.card-two .type-name,
+.card-two .dish-type p,
+.card-two .dish-description {
+    margin-top: 3px;
+}
+
+.card-one .type-img,
+.card-two .type-img {
+    margin-right: 8px;
+}
+
+.card-one .hr-break,
+.card-two .hr-break {
+    margin-bottom: 12px;
+    margin-top: 12px;
+    height: 0.5px;
+    background-color: rgba(47, 47, 47, 0.369);
+    border-radius: 30px;
+}
+
+.card-one .dish-ingredients,
+.card-two .dish-ingredients {
+    width: 95%;
+    margin-top: 8px;
+}
+
+.card-one .recipe-btn,
+.card-two .recipe-btn {
+    margin-top: 15px;
+    margin-left: 3px;
+}
+
+.card-one p,
+.card-two p {
+    font-size: 96%;
 }
