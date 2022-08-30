@@ -6,8 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Odin Recipes brings you the best realisable dishes from Liyue in Genshin Impact.">
+    <meta name="description" content="Odin Recipes brings you the best realisable dishes from Liyue in Genshin Impact.">
     <meta name="keywords"
         content="Liyue recipes, Liyue dishes, genshin impact recipe website, odin recipes, recipes, Genshin Impact, The Odin Project, Genshin Impact Recipes, Genshin Impact cooking, Genhsin Impact dishes, MisterValiant">
 
@@ -22,8 +21,7 @@
 
     <header class="my-header">
         <nav class="nav-container">
-            <a href="../index.html"><img class="my-logo" src="../images/logo.png"
-                    alt="Odin recipes logo"></a>
+            <a href="../index.html"><img class="my-logo" src="../images/logo.png" alt="Odin recipes logo"></a>
 
             <img id="audio-player" onclick="audioController()" class="my-audio" src="../images/pause.png"
                 alt="Odin recipes audio" title="Play">
@@ -49,7 +47,9 @@
         <div class="recipe-container">
             <section id="main-section">
                 <div class="arrow-one">
-                    <i class="bi bi-arrow-left-circle"></i>
+                    <a onclick="slideRecipe('previous')">
+                        <i class="bi bi-arrow-left-circle"></i>
+                    </a>
                 </div>
 
                 <div class="card-one">
@@ -65,7 +65,9 @@
                 </div>
 
                 <div class="arrow-two">
-                    <i class="bi bi-arrow-right-circle"></i>
+                    <a onclick="slideRecipe('next')">
+                        <i class="bi bi-arrow-right-circle"></i>
+                    </a>
                 </div>
             </section>
         </div>
@@ -84,6 +86,7 @@
         </div>
     </footer>
 
+    <script src="../js/recipes/liyue.js"></script>
     <script src="../js/recipe.js"></script>
 </body>
 

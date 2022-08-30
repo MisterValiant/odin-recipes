@@ -49,7 +49,9 @@
         <div class="recipe-container">
             <section id="main-section">
                 <div class="arrow-one">
-                    <i class="bi bi-arrow-left-circle"></i>
+                    <a onclick="slideRecipe('previous')">
+                        <i class="bi bi-arrow-left-circle"></i>
+                    </a>
                 </div>
 
                 <div class="card-one">
@@ -65,7 +67,9 @@
                 </div>
 
                 <div class="arrow-two">
-                    <i class="bi bi-arrow-right-circle"></i>
+                    <a onclick="slideRecipe('next')">
+                        <i class="bi bi-arrow-right-circle"></i>
+                    </a>
                 </div>
             </section>
         </div>
@@ -83,7 +87,7 @@
                     class="bi bi-youtube"></i></a>
         </div>
     </footer>
-
+    <script src="../js/recipes/inazuma.js"></script>
     <script src="../js/recipe.js"></script>
 </body>
 
