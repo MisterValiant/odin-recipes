@@ -1,3 +1,14 @@
+//Liyue Background
+var myBackground = document.getElementById('main-content-liyue');
+
+function backgroundController(modeNumber) {
+    if (modeNumber == 0) {
+        myBackground.style.backgroundImage = 'url(../images/liyue-recipe-day.png)';
+    } else {
+        myBackground.style.backgroundImage = 'url(../images/liyue-recipe-night.png)';
+    }
+}
+
 //Liyue Recipes
 var dish1 = `<div class="glassmorphism">
 <div class="card-top">

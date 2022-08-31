@@ -88,6 +88,8 @@ function day() {
     var icon = document.getElementById('switch-icon');
     icon.classList.remove("bi-stars");
     icon.classList.add("bi-brightness-alt-high-fill");
+
+    backgroundController(0);
 }
 
 function night() {
@@ -98,6 +100,8 @@ function night() {
     var icon = document.getElementById('switch-icon');
     icon.classList.remove("bi-brightness-alt-high-fill");
     icon.classList.add("bi-stars");
+
+    backgroundController(1);
 }
 
 function modeCycle() {
@@ -165,6 +169,11 @@ function slideRecipe(action) {
             recipeParam--;
         }
     }
+
+    var audioSlide = new Audio('../audio/slide.wav');
+    audioSlide.volume = 0.3;
+    audioSlide.play();
+
     clearCards();
     sliderController();
 }

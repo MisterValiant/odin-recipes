@@ -1,3 +1,14 @@
+//Mondstadt Background
+var myBackground = document.getElementById('main-content-mondstadt');
+
+function backgroundController(modeNumber) {
+    if (modeNumber == 0) {
+        myBackground.style.backgroundImage = 'url(../images/mondstadt-recipe-day.png)';
+    } else {
+        myBackground.style.backgroundImage = 'url(../images/mondstadt-recipe-night.png)';
+    }
+}
+
 //Mondstadt Recipes
 var dish1 = `<div class="glassmorphism">
 <div class="card-top">

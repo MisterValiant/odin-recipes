@@ -121,6 +121,10 @@ body {
     cursor: pointer;
 }
 
+#main-content-mondstadt, #main-content-liyue, #main-content-inazuma {
+    transition: all .5s ease-in-out;
+}
+
 /* Footer */
 
 .my-footer {

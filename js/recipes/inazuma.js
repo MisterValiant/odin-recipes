@@ -1,3 +1,15 @@
+//Mondstadt Background
+var myBackground = document.getElementById('main-content-inazuma');
+
+function backgroundController(modeNumber) {
+    if (modeNumber == 0) {
+        myBackground.style.backgroundImage = 'url(../images/inazuma-recipe-day.png)';
+    } else {
+        myBackground.style.backgroundImage = 'url(../images/inazuma-recipe-night.png)';
+    }
+}
+
+
 //Inazuma Recipes
 var dish1 = `<div class="glassmorphism">
 <div class="card-top">
