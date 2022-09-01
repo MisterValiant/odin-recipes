@@ -402,3 +402,25 @@ function inazumaDish(dishNumber) {
     myDish.style.opacity = 1;
     myDish.style.zIndex = 1;
 }
+
+// Browse to recipe page
+function browseRecipe(recipeID) {
+
+    var locationID = recipeID.charAt(0);
+    var dishID = recipeID.charAt(1);
+    var destination = '';
+
+    if (locationID == 'm') {
+        destination = 'html/mondstadt.html?recipe=';
+    } else if (locationID == 'l') {
+        destination = 'html/liyue.html?recipe=';
+    } else if (locationID == 'i') {
+        destination = 'html/inazuma.html?recipe=';
+    } else {
+        alert('Error 404! The recipe page for this dish does not exist. Contact the author to get it fix.');
+    }
+
+    if (destination!='') {
+        window.location.href = destination + dishID;
+    }
+}

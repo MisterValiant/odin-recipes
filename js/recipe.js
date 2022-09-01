@@ -122,11 +122,11 @@ function modeCycle() {
 // URL Parameters
 var recipeParam = document.URL.match(/recipe=([0-9]+)/);
 
-if (recipeParam == null) {
-    recipeParam = 1;
+if (recipeParam!=null && recipeParam[1] >= 1 && recipeParam[1] <= 5) {
+    recipeParam = recipeParam[1];
     sliderController();
 } else {
-    recipeParam = recipeParam[1];
+    recipeParam = 1;
     sliderController();
 }
 
