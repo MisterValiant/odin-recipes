@@ -15,46 +15,68 @@ window.onload = function () {
 // Background Controls
 
 function backgroundController(tabNumber) {
-    var myBackground = document.getElementById('main-content');
+    var myBackground = document.querySelector('.background-img img:nth-of-type(' + tabNumber + ')');
+    var backBackground = document.querySelector('.background-img');
     var regionName = document.getElementById('location-name');
     var worldName = document.querySelector('.world-name');
 
+    document.querySelectorAll('.background-img img').forEach(listItem => {
+        listItem.style.opacity = 0;
+    });
+
     if (!document.getElementById('my-checkbox').checked && tabNumber == 1) {
-        myBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(1)');
+        myBackground.style.opacity = 1;
         regionName.textContent = 'Stormbearer Mountains';
         worldName.style.backgroundColor = 'rgba(0, 228, 170, 0.35)';
+        backBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 1) {
-        myBackground.style.backgroundImage = 'url(images/mondstadt-night.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(2)');
+        myBackground.style.opacity = 1;
         regionName.textContent = 'Anemo Archon Statue';
         worldName.style.backgroundColor = 'rgba(0, 228, 170, 0.35)';
+        backBackground.style.backgroundImage = 'url(images/mondstadt-night.webp)';
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 2) {
-        myBackground.style.backgroundImage = 'url(images/liyue-day.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(3)');
+        myBackground.style.opacity = 1;
         regionName.textContent = 'Wangshu Inn';
         worldName.style.backgroundColor = 'rgba(255, 189, 66, 0.747)';
+        backBackground.style.backgroundImage = 'url(images/liyue-day.webp)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 2) {
-        myBackground.style.backgroundImage = 'url(images/liyue-night.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(4)');
+        myBackground.style.opacity = 1;
         regionName.textContent = 'Qingce Village';
         worldName.style.backgroundColor = 'rgba(255, 189, 66, 0.747)';
+        backBackground.style.backgroundImage = 'url(images/liyue-night.webp)';
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 3) {
-        myBackground.style.backgroundImage = 'url(images/inazuma-day.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(5)');
+        myBackground.style.opacity = 1;
         regionName.textContent = 'City of Eternity';
         worldName.style.backgroundColor = 'rgba(250, 55, 205, 0.597)';
+        backBackground.style.backgroundImage = 'url(images/inazuma-day.webp)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 3) {
-        myBackground.style.backgroundImage = 'url(images/inazuma-night.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(6)');
+        myBackground.style.opacity = 1;
         regionName.textContent = 'Amakane Island';
         worldName.style.backgroundColor = 'rgba(250, 55, 205, 0.597)';
+        backBackground.style.backgroundImage = 'url(images/inazuma-night.webp)';
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 4) {
-        myBackground.style.backgroundImage = 'url(images/more-day.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(7)');
+        myBackground.style.opacity = 1;
         regionName.textContent = 'Liyue Harbour Oceanview';
         worldName.style.backgroundColor = 'white';
+        backBackground.style.backgroundImage = 'url(images/more-day.webp)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 4) {
-        myBackground.style.backgroundImage = 'url(images/more-night.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(8)');
+        myBackground.style.opacity = 1;
         regionName.textContent = 'Qingyun Peak';
         worldName.style.backgroundColor = 'white';
+        backBackground.style.backgroundImage = 'url(images/more-night.webp)';
     } else {
-        myBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
+        myBackground.style.opacity = 1;
         regionName.textContent = 'Stormbearer Mountains';
         worldName.style.backgroundColor = 'white';
+        backBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
     }
 
     recipeController(tabNumber);
@@ -430,9 +452,9 @@ var htmlDoc = document.querySelector('html');
 //Max supported screen
 window.onresize = function () {
     if (window.screen.availHeight < 740 || window.screen.availWidth < 1069) {
-        htmlDoc.style.filter='blur(30px)';
+        htmlDoc.style.filter = 'blur(30px)';
         alert('Thank you for using Odin Recipes! 🤗 The website currently only supports a min resolution of 1069x740. MisterValiant is currently fixing the issue, stay tune!');
     } else {
-        htmlDoc.style.filter='blur(0px)';
+        htmlDoc.style.filter = 'blur(0px)';
     }
 }

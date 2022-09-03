@@ -123,6 +123,35 @@ body {
 
 #main-content-mondstadt, #main-content-liyue, #main-content-inazuma {
     transition: all .5s ease-in-out;
+    z-index: 1;
+    margin-left: -.0125px;
+}
+
+.background-img{
+    transition: all .5s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-img img{
+    transition: all .5s ease-in-out;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background-img img:nth-of-type(n){
+    opacity: 0;
 }
 
 /* Footer */
@@ -210,18 +239,6 @@ body {
     height: 100%;
 }
 
-#main-content-mondstadt {
-    background-image: url(../images/mondstadt-recipe-day.webp);
-}
-
-#main-content-liyue {
-    background-image: url(../images/liyue-recipe-day.webp);
-}
-
-#main-content-inazuma {
-    background-image: url(../images/inazuma-recipe-day.webp);
-}
-
 /* Cards */
 
 .main-card {
@@ -254,7 +271,7 @@ body {
     top: 50%;
     left: 75%;
     transform: translate(-50%, -50%);
-    z-index: 0;
+    z-index: 1;
 }
 
 .glassmorphism {

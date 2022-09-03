@@ -1,13 +1,21 @@
 //Liyue Background
-var myBackground = document.getElementById('main-content-liyue');
+var myBackground = document.querySelector('.background-img img:nth-of-type(1)');
+document.querySelector('.background-img').style.backgroundImage='url(../images/liyue-recipe-day.webp)';
 
 function backgroundController(modeNumber) {
     if (modeNumber == 0) {
-        myBackground.style.backgroundImage = 'url(../images/liyue-recipe-day.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(1)');
+        myBackground.style.opacity = 1;
+        myBackground = document.querySelector('.background-img img:nth-of-type(2)');
+        myBackground.style.opacity = 0;
     } else {
-        myBackground.style.backgroundImage = 'url(../images/liyue-recipe-night.webp)';
+        myBackground = document.querySelector('.background-img img:nth-of-type(1)');
+        myBackground.style.opacity = 0;
+        myBackground = document.querySelector('.background-img img:nth-of-type(2)');
+        myBackground.style.opacity = 1;
     }
 }
+
 
 //Liyue Recipes
 var dish1 = `<div class="glassmorphism">
