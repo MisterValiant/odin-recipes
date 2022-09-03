@@ -199,7 +199,7 @@ body {
 /* Main */
 
 .main-container {
-    background-image: url(../images/mondstadt-day.png);
+    background-image: url(../images/mondstadt-day.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -251,7 +251,7 @@ body {
 }
 
 .location-container li {
-    list-style: url(../images/list-style.png);
+    list-style: url(../images/list-style.webp);
     background-size: 10px;
 }
 
@@ -286,7 +286,7 @@ body {
 }
 
 .location-container .selected-li {
-    list-style: url(../images/list-style-selected.png);
+    list-style: url(../images/list-style-selected.webp);
 }
 
 .selected-li button {

@@ -68,13 +68,13 @@ function resetAudio() {
 
 function playImg() {
     var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = '../images/play.png';
+    audioPlayer.src = '../images/play.webp';
     audioPlayer.title = 'Pause audio';
 }
 
 function pauseImg() {
     var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = '../images/pause.png';
+    audioPlayer.src = '../images/pause.webp';
     audioPlayer.title = 'Play audio';
 }
 

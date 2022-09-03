@@ -211,15 +211,15 @@ body {
 }
 
 #main-content-mondstadt {
-    background-image: url(../images/mondstadt-recipe-day.png);
+    background-image: url(../images/mondstadt-recipe-day.webp);
 }
 
 #main-content-liyue {
-    background-image: url(../images/liyue-recipe-day.png);
+    background-image: url(../images/liyue-recipe-day.webp);
 }
 
 #main-content-inazuma {
-    background-image: url(../images/inazuma-recipe-day.png);
+    background-image: url(../images/inazuma-recipe-day.webp);
 }
 
 /* Cards */

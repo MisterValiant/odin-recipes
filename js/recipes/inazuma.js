@@ -3,9 +3,9 @@ var myBackground = document.getElementById('main-content-inazuma');
 
 function backgroundController(modeNumber) {
     if (modeNumber == 0) {
-        myBackground.style.backgroundImage = 'url(../images/inazuma-recipe-day.png)';
+        myBackground.style.backgroundImage = 'url(../images/inazuma-recipe-day.webp)';
     } else {
-        myBackground.style.backgroundImage = 'url(../images/inazuma-recipe-night.png)';
+        myBackground.style.backgroundImage = 'url(../images/inazuma-recipe-night.webp)';
     }
 }
 
@@ -41,7 +41,7 @@ var dish1 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/inazuma/mixed-yakisoba.png"
+        <img class="dish-ingredients" src="../images/ingredients/inazuma/mixed-yakisoba.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -79,7 +79,7 @@ var dish2 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/inazuma/katsu-sandwich.png"
+        <img class="dish-ingredients" src="../images/ingredients/inazuma/katsu-sandwich.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -117,7 +117,7 @@ var dish3 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/inazuma/tonkotsu-ramen.png"
+        <img class="dish-ingredients" src="../images/ingredients/inazuma/tonkotsu-ramen.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -158,7 +158,7 @@ var dish4 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/inazuma/omelette-rice.png"
+        <img class="dish-ingredients" src="../images/ingredients/inazuma/omelette-rice.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -199,7 +199,7 @@ var dish5 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/inazuma/konda-cuisine.png"
+        <img class="dish-ingredients" src="../images/ingredients/inazuma/konda-cuisine.webp"
             alt="Ingredients" title="Ingredients">
     </div>
 

@@ -3,9 +3,9 @@ var myBackground = document.getElementById('main-content-liyue');
 
 function backgroundController(modeNumber) {
     if (modeNumber == 0) {
-        myBackground.style.backgroundImage = 'url(../images/liyue-recipe-day.png)';
+        myBackground.style.backgroundImage = 'url(../images/liyue-recipe-day.webp)';
     } else {
-        myBackground.style.backgroundImage = 'url(../images/liyue-recipe-night.png)';
+        myBackground.style.backgroundImage = 'url(../images/liyue-recipe-night.webp)';
     }
 }
 
@@ -40,7 +40,7 @@ var dish1 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/liyue/rice-pudding.png"
+        <img class="dish-ingredients" src="../images/ingredients/liyue/rice-pudding.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -78,7 +78,7 @@ var dish2 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/liyue/fried-radish-balls.png"
+        <img class="dish-ingredients" src="../images/ingredients/liyue/fried-radish-balls.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -116,7 +116,7 @@ var dish3 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/liyue/almond-tofu.png"
+        <img class="dish-ingredients" src="../images/ingredients/liyue/almond-tofu.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -157,7 +157,7 @@ var dish4 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/liyue/mora-meat.png"
+        <img class="dish-ingredients" src="../images/ingredients/liyue/mora-meat.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -198,7 +198,7 @@ var dish5 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/liyue/jewellery-soup.png"
+        <img class="dish-ingredients" src="../images/ingredients/liyue/jewellery-soup.webp"
             alt="Ingredients" title="Ingredients">
     </div>
 

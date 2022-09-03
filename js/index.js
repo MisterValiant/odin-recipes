@@ -20,39 +20,39 @@ function backgroundController(tabNumber) {
     var worldName = document.querySelector('.world-name');
 
     if (!document.getElementById('my-checkbox').checked && tabNumber == 1) {
-        myBackground.style.backgroundImage = 'url(images/mondstadt-day.png)';
+        myBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
         regionName.textContent = 'Stormbearer Mountains';
         worldName.style.backgroundColor = 'rgba(0, 228, 170, 0.35)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 1) {
-        myBackground.style.backgroundImage = 'url(images/mondstadt-night.png)';
+        myBackground.style.backgroundImage = 'url(images/mondstadt-night.webp)';
         regionName.textContent = 'Anemo Archon Statue';
         worldName.style.backgroundColor = 'rgba(0, 228, 170, 0.35)';
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 2) {
-        myBackground.style.backgroundImage = 'url(images/liyue-day.png)';
+        myBackground.style.backgroundImage = 'url(images/liyue-day.webp)';
         regionName.textContent = 'Wangshu Inn';
         worldName.style.backgroundColor = 'rgba(255, 189, 66, 0.747)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 2) {
-        myBackground.style.backgroundImage = 'url(images/liyue-night.png)';
+        myBackground.style.backgroundImage = 'url(images/liyue-night.webp)';
         regionName.textContent = 'Qingce Village';
         worldName.style.backgroundColor = 'rgba(255, 189, 66, 0.747)';
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 3) {
-        myBackground.style.backgroundImage = 'url(images/inazuma-day.png)';
+        myBackground.style.backgroundImage = 'url(images/inazuma-day.webp)';
         regionName.textContent = 'City of Eternity';
         worldName.style.backgroundColor = 'rgba(250, 55, 205, 0.597)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 3) {
-        myBackground.style.backgroundImage = 'url(images/inazuma-night.png)';
+        myBackground.style.backgroundImage = 'url(images/inazuma-night.webp)';
         regionName.textContent = 'Amakane Island';
         worldName.style.backgroundColor = 'rgba(250, 55, 205, 0.597)';
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 4) {
-        myBackground.style.backgroundImage = 'url(images/more-day.png)';
+        myBackground.style.backgroundImage = 'url(images/more-day.webp)';
         regionName.textContent = 'Liyue Harbour Oceanview';
         worldName.style.backgroundColor = 'white';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 4) {
-        myBackground.style.backgroundImage = 'url(images/more-night.png)';
+        myBackground.style.backgroundImage = 'url(images/more-night.webp)';
         regionName.textContent = 'Qingyun Peak';
         worldName.style.backgroundColor = 'white';
     } else {
-        myBackground.style.backgroundImage = 'url(images/mondstadt-day.png)';
+        myBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
         regionName.textContent = 'Stormbearer Mountains';
         worldName.style.backgroundColor = 'white';
     }
@@ -158,13 +158,13 @@ function resetAudio() {
 
 function playImg() {
     var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = 'images/play.png';
+    audioPlayer.src = 'images/play.webp';
     audioPlayer.title = 'Pause audio';
 }
 
 function pauseImg() {
     var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = 'images/pause.png';
+    audioPlayer.src = 'images/pause.webp';
     audioPlayer.title = 'Play audio';
 }
 

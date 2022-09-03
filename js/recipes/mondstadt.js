@@ -3,9 +3,9 @@ var myBackground = document.getElementById('main-content-mondstadt');
 
 function backgroundController(modeNumber) {
     if (modeNumber == 0) {
-        myBackground.style.backgroundImage = 'url(../images/mondstadt-recipe-day.png)';
+        myBackground.style.backgroundImage = 'url(../images/mondstadt-recipe-day.webp)';
     } else {
-        myBackground.style.backgroundImage = 'url(../images/mondstadt-recipe-night.png)';
+        myBackground.style.backgroundImage = 'url(../images/mondstadt-recipe-night.webp)';
     }
 }
 
@@ -41,7 +41,7 @@ var dish1 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/mondstadt/mushroom-pizza.png"
+        <img class="dish-ingredients" src="../images/ingredients/mondstadt/mushroom-pizza.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -80,7 +80,7 @@ var dish2 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/mondstadt/hash-brown.png"
+        <img class="dish-ingredients" src="../images/ingredients/mondstadt/hash-brown.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -119,7 +119,7 @@ var dish3 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/mondstadt/goulash.png"
+        <img class="dish-ingredients" src="../images/ingredients/mondstadt/goulash.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -161,7 +161,7 @@ var dish4 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/mondstadt/grilled-fish.png"
+        <img class="dish-ingredients" src="../images/ingredients/mondstadt/grilled-fish.webp"
             alt="Ingredients" title="Ingredients">
     </div>
     <div class="btn-container">
@@ -203,7 +203,7 @@ var dish5 = `<div class="glassmorphism">
         <p><strong>Cooking :</strong></p>
     </div>
     <div class="ingredient-container">
-        <img class="dish-ingredients" src="../images/ingredients/mondstadt/ratatouille.png"
+        <img class="dish-ingredients" src="../images/ingredients/mondstadt/ratatouille.webp"
             alt="Ingredients" title="Ingredients">
     </div>
 
