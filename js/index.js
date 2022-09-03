@@ -10,6 +10,15 @@ window.onload = function () {
         document.getElementById('my-checkbox').checked = true;
         night();
     }
+
+    //Preloading all background images
+    var myBackground = document.getElementById('main-content');
+    myBackground.style.backgroundImage = 'url(images/mondstadt-night.webp)';
+    myBackground.style.backgroundImage = 'url(images/liyue-day.webp)';
+    myBackground.style.backgroundImage = 'url(images/liyue-night.webp)';
+    myBackground.style.backgroundImage = 'url(images/inazuma-day.webp)';
+    myBackground.style.backgroundImage = 'url(images/inazuma-night.webp)';
+    myBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
 }
 
 // Background Controls
