@@ -3,16 +3,6 @@ var audio = new Audio('audio/genshin-bgm.mp3');
 var audioNight = new Audio('audio/genshin-watatsumi.mp3');
 
 window.onload = function () {
-
-    //Preloading all background images
-    var myBackground = document.getElementById('main-content');
-    myBackground.style.backgroundImage = 'url(images/mondstadt-night.webp)';
-    myBackground.style.backgroundImage = 'url(images/liyue-day.webp)';
-    myBackground.style.backgroundImage = 'url(images/liyue-night.webp)';
-    myBackground.style.backgroundImage = 'url(images/inazuma-day.webp)';
-    myBackground.style.backgroundImage = 'url(images/inazuma-night.webp)';
-    myBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
-
     if ((currentTimeInHr >= 6 && currentTimeInHr < 18)) {
         document.getElementById('my-checkbox').checked = false;
         day();
