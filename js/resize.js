@@ -1,3 +1,5 @@
+// DEVELOPEMENT PURPOSES
+
 // var htmlDoc = document.querySelector('html');
 
 // //Max supported screen

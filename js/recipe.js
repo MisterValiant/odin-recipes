@@ -42,7 +42,7 @@ function playAudio() {
     clickAudio.currentTime = 0;
     clickAudio.play();
 
-    playImg();
+    playImg(1);
 }
 
 function pauseAudio() {
@@ -54,7 +54,20 @@ function pauseAudio() {
     audio.pause();
     audioNight.pause();
 
-    pauseImg();
+    playImg(0);
+}
+
+function playImg(audioOption) {
+    var audioPlayer = '';
+    if (audioOption == 1) {
+        var audioPlayer = document.getElementById('audio-player');
+        audioPlayer.src = '../images/play.webp';
+        audioPlayer.title = 'Pause audio';
+    } else {
+        audioPlayer = document.getElementById('audio-player');
+        audioPlayer.src = '../images/pause.webp';
+        audioPlayer.title = 'Play audio';
+    }
 }
 
 function resetAudio() {
@@ -63,19 +76,7 @@ function resetAudio() {
     audioNight.pause();
     audioNight.currentTime = 0;
 
-    pauseImg();
-}
-
-function playImg() {
-    var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = '../images/play.webp';
-    audioPlayer.title = 'Pause audio';
-}
-
-function pauseImg() {
-    var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = '../images/pause.webp';
-    audioPlayer.title = 'Play audio';
+    playImg(0);
 }
 
 // Day-Night Controls
@@ -122,7 +123,7 @@ function modeCycle() {
 // URL Parameters
 var recipeParam = document.URL.match(/recipe=([0-9]+)/);
 
-if (recipeParam!=null && recipeParam[1] >= 1 && recipeParam[1] <= 5) {
+if (recipeParam != null && recipeParam[1] >= 1 && recipeParam[1] <= 5) {
     recipeParam = recipeParam[1];
     sliderController();
 } else {
@@ -130,28 +131,32 @@ if (recipeParam!=null && recipeParam[1] >= 1 && recipeParam[1] <= 5) {
     sliderController();
 }
 
-// Slider
+// Sliders control (Not the best approach!!)
 function sliderController() {
+    var cardOne = document.querySelector('.card-one');
+    var cardMain = document.querySelector('.main-card');
+    var cardTwo = document.querySelector('.card-two');
+
     if (recipeParam == 1) {
-        document.querySelector('.card-one').innerHTML = dish5;
-        document.querySelector('.main-card').innerHTML = dish1;
-        document.querySelector('.card-two').innerHTML = dish2;
+        cardOne.innerHTML = dish5;
+        cardMain.innerHTML = dish1;
+        cardTwo.innerHTML = dish2;
     } else if (recipeParam == 2) {
-        document.querySelector('.card-one').innerHTML = dish1;
-        document.querySelector('.main-card').innerHTML = dish2;
-        document.querySelector('.card-two').innerHTML = dish3;
+        cardOne.innerHTML = dish1;
+        cardMain.innerHTML = dish2;
+        cardTwo.innerHTML = dish3;
     } else if (recipeParam == 3) {
-        document.querySelector('.card-one').innerHTML = dish2;
-        document.querySelector('.main-card').innerHTML = dish3;
-        document.querySelector('.card-two').innerHTML = dish4;
+        cardOne.innerHTML = dish2;
+        cardMain.innerHTML = dish3;
+        cardTwo.innerHTML = dish4;
     } else if (recipeParam == 4) {
-        document.querySelector('.card-one').innerHTML = dish3;
-        document.querySelector('.main-card').innerHTML = dish4;
-        document.querySelector('.card-two').innerHTML = dish5;
+        cardOne.innerHTML = dish3;
+        cardMain.innerHTML = dish4;
+        cardTwo.innerHTML = dish5;
     } else if (recipeParam == 5) {
-        document.querySelector('.card-one').innerHTML = dish4;
-        document.querySelector('.main-card').innerHTML = dish5;
-        document.querySelector('.card-two').innerHTML = dish1;
+        cardOne.innerHTML = dish4;
+        cardMain.innerHTML = dish5;
+        cardTwo.innerHTML = dish1;
     }
 }
 

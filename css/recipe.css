@@ -16,16 +16,20 @@ body {
     z-index: 0;
 }
 
-/* Header */
-
-.my-header {
+.my-header, .my-footer {
     background-color: rgba(0, 0, 0, 0.7);
     height: 66px;
     width: 100%;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     position: fixed;
-    top: 0;
+    bottom: 0;
     z-index: 2;
+}
+
+/* Header */
+
+.my-header {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    top: 0;
 }
 
 .my-logo {
@@ -50,6 +54,7 @@ body {
     float: right;
 }
 
+/* Header: Gesnhin Reference */
 .genshin-ref {
     transition: ease-out 0.3s;
     color: black;
@@ -73,7 +78,7 @@ body {
     color: rgb(63, 9, 9);
 }
 
-/** Switch
+/** Header: Switch
    -------------------------------------*/
 .switch-container {
     position: absolute;
@@ -122,48 +127,10 @@ body {
     cursor: pointer;
 }
 
-#main-content-mondstadt,
-#main-content-liyue,
-#main-content-inazuma {
-    transition: .5s ease-in-out;
-    z-index: 1;
-    margin-left: -.0125px;
-}
-
-.background-img {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.background-img img {
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.background-img img:nth-of-type(n) {
-    opacity: 0;
-}
-
 /* Footer */
 
 .my-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 66px;
-    width: 100%;
-    position: fixed;
     bottom: 0;
-    z-index: 2;
 }
 
 .socials {
@@ -230,6 +197,42 @@ body {
     color: wheat;
 }
 
+/* Main */
+
+#main-content-mondstadt,
+#main-content-liyue,
+#main-content-inazuma {
+    transition: .5s ease-in-out;
+    z-index: 1;
+    margin-left: -.0125px;
+}
+
+.background-img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.background-img img {
+    transition: .5s ease-in-out;
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.background-img img:nth-of-type(n) {
+    opacity: 0;
+}
+
 #main-content-mondstadt,
 #main-content-liyue,
 #main-content-inazuma {
@@ -240,39 +243,35 @@ body {
     height: 100%;
 }
 
-/* Cards */
+/* Main: Cards */
+.main-card, .card-one, .card-two{
+    position: absolute;
+    z-index: 1;
+    color: black;
+}
 
 .main-card {
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(calc(-50% - .4px), calc(-50% - .4px));
     width: 300px;
     height: 530px;
-    z-index: 1;
-    color: black;
 }
 
 .card-one,
 .card-two {
-    position: absolute;
     width: 240px;
     height: 450px;
-    z-index: 1;
-    color: black;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .card-one {
-    top: 50%;
     left: 25%;
-    transform: translate(-50%, -50%);
 }
 
 .card-two {
-    top: 50%;
     left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
 }
 
 .glassmorphism {
@@ -286,6 +285,7 @@ body {
     height: 95.4%;
 }
 
+/* Main: Arrows */
 .arrow-one,
 .arrow-two {
     transition: ease-in-out .5s;
@@ -295,31 +295,30 @@ body {
     color: rgba(255, 255, 255, 0.846);
     font-size: 43px;
     cursor: pointer;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .arrow-one a, .arrow-two a{
+    transition: .5s ease-in-out;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.846);
 }
 
 .arrow-one {
-    top: 50%;
     left: 12.5%;
-    transform: translate(-50%, -50%);
 }
 
 .arrow-two {
-    top: 50%;
     left: 87.5%;
-    transform: translate(-50%, -50%);
 }
 
-.arrow-one:hover,
-.arrow-two:hover {
+.arrow-one a:hover,
+.arrow-two a:hover {
     color: white;
 }
 
-/* Main card */
+/* Main: Main card */
 .card-top {
     display: flex;
     align-items: center;
@@ -414,7 +413,7 @@ body {
     width: 70%;
 }
 
-/* Side cards */
+/* Main: Side cards */
 
 
 .card-one .card-top img,

@@ -167,12 +167,13 @@ function pauseAudio() {
 }
 
 function playImg(audioOption) {
+    var audioPlayer = '';
     if (audioOption == 1) {
-        var audioPlayer = document.getElementById('audio-player');
+        audioPlayer = document.getElementById('audio-player');
         audioPlayer.src = 'images/play.webp';
         audioPlayer.title = 'Pause audio';
     } else {
-        var audioPlayer = document.getElementById('audio-player');
+        audioPlayer = document.getElementById('audio-player');
         audioPlayer.src = 'images/pause.webp';
         audioPlayer.title = 'Play audio';
     }
