@@ -1,6 +1,7 @@
 @font-face {
     font-family: "coves";
     src: url(../font/Coves-Light.otf);
+    font-display: swap;
 }
 
 * {
@@ -124,13 +125,12 @@ body {
 #main-content-mondstadt,
 #main-content-liyue,
 #main-content-inazuma {
-    transition: all .5s ease-in-out;
+    transition: .5s ease-in-out;
     z-index: 1;
     margin-left: -.0125px;
 }
 
 .background-img {
-    transition: all .5s ease-in-out;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -144,7 +144,6 @@ body {
 }
 
 .background-img img {
-    transition: all .5s ease-in-out;
     position: absolute;
     z-index: 0;
     width: 100%;
@@ -296,6 +295,11 @@ body {
     color: rgba(255, 255, 255, 0.846);
     font-size: 43px;
     cursor: pointer;
+}
+
+.arrow-one a, .arrow-two a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.846);
 }
 
 .arrow-one {
@@ -535,8 +539,12 @@ body {
         padding-bottom: 210px;
     }
 
-    .main-card, .card-one, .card-two, .arrow-one, .arrow-two{
+    .main-card, .card-one, .card-two{
         top: 58%;
+    }
+
+    .arrow-one, .arrow-two{
+        top: 33%;
     }
 }
 
@@ -546,8 +554,12 @@ body {
         padding-bottom: 450px;
     }
 
-    .main-card, .card-one, .card-two, .arrow-one, .arrow-two{
+    .main-card, .card-one, .card-two{
         top: 70%;
+    }
+
+    .arrow-one, .arrow-two{
+        top: 45%;
     }
 }
 
@@ -556,7 +568,11 @@ body {
         padding-bottom: 650px;
     }
 
-    .main-card, .card-one, .card-two, .arrow-one, .arrow-two{
+    .main-card, .card-one, .card-two{
         top: 90%;
+    }
+
+    .arrow-one, .arrow-two{
+        top: 60%;
     }
 }

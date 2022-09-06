@@ -339,6 +339,11 @@ body {
     width: 190px;
 }
 
+.region-name p:nth-of-type(1){
+    font-weight: bold;
+    font-size: 18.73px;
+}
+
 .world-name {
     display: inline-block;
     width: 100px;
@@ -813,7 +818,7 @@ body {
     }
 
     .dish-description p {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .main-section {

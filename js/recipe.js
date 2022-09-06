@@ -1,6 +1,6 @@
 var currentTimeInHr = (new Date()).getHours();
-var audio = new Audio('../audio/genshin-bgm.mp3');
-var audioNight = new Audio('../audio/genshin-watatsumi.mp3');
+var audio = new Audio('../audio/genshin-main-theme.mp3');
+var audioNight = new Audio('../audio/genshin-qilins-prance.mp3');
 
 window.onload = function () {
     if ((currentTimeInHr >= 6 && currentTimeInHr < 18)) {

@@ -1,6 +1,6 @@
 var currentTimeInHr = (new Date()).getHours();
-var audio = new Audio('audio/genshin-bgm.mp3');
-var audioNight = new Audio('audio/genshin-watatsumi.mp3');
+var audio = new Audio('audio/genshin-main-theme.mp3');
+var audioNight = new Audio('audio/genshin-qilins-prance.mp3');
 
 window.onload = function () {
     if ((currentTimeInHr >= 6 && currentTimeInHr < 18)) {
@@ -347,7 +347,7 @@ function mondstadtDish(dishNumber) {
     selectedDish.classList.add('selected-dish');
 
     if (audio.paused && audioNight.paused && originalDishID != dishNumber) {
-        var dishAudio = new Audio('audio/select-dish.wav');
+        var dishAudio = new Audio('audio/select-dish.mp3');
         dishAudio.volume = 0.08;
         dishAudio.play();
     }
@@ -377,7 +377,7 @@ function liyueDish(dishNumber) {
     selectedDish.classList.add('selected-dish');
 
     if (audio.paused && audioNight.paused && originalDishID != dishNumber) {
-        var dishAudio = new Audio('audio/select-dish.wav');
+        var dishAudio = new Audio('audio/select-dish.mp3');
         dishAudio.volume = 0.08;
         dishAudio.play();
     }
@@ -407,7 +407,7 @@ function inazumaDish(dishNumber) {
     selectedDish.classList.add('selected-dish');
 
     if (audio.paused && audioNight.paused && originalDishID != dishNumber) {
-        var dishAudio = new Audio('audio/select-dish.wav');
+        var dishAudio = new Audio('audio/select-dish.mp3');
         dishAudio.volume = 0.08;
         dishAudio.play();
     }
