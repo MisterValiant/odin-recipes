@@ -21,7 +21,7 @@ function audioController() {
         } else {
             audio.play();
             audio.loop = true;
-            audio.volume = 1.0;
+            audio.volume = .5;
             playAudio();
         }
     } else {
@@ -30,7 +30,7 @@ function audioController() {
         } else {
             audioNight.play();
             audioNight.loop = true;
-            audioNight.volume = 0.5;
+            audioNight.volume = 0.3;
             playAudio();
         }
     }

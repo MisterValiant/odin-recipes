@@ -12,7 +12,7 @@ window.onload = function () {
     }
 }
 
-// Background Controls
+// Background Controls: Day-Night Cycle
 
 function backgroundController(tabNumber) {
     var myBackground = document.querySelector('.background-img img:nth-of-type(' + tabNumber + ')');
@@ -26,61 +26,56 @@ function backgroundController(tabNumber) {
 
     if (!document.getElementById('my-checkbox').checked && tabNumber == 1) {
         myBackground = document.querySelector('.background-img img:nth-of-type(1)');
-        myBackground.style.opacity = 1;
         regionName.textContent = 'Stormbearer Mountains';
         worldName.style.backgroundColor = 'rgba(0, 228, 170, 0.35)';
         backBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 1) {
         myBackground = document.querySelector('.background-img img:nth-of-type(2)');
-        myBackground.style.opacity = 1;
         regionName.textContent = 'Anemo Archon Statue';
         worldName.style.backgroundColor = 'rgba(0, 228, 170, 0.35)';
         backBackground.style.backgroundImage = 'url(images/mondstadt-night.webp)';
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 2) {
         myBackground = document.querySelector('.background-img img:nth-of-type(3)');
-        myBackground.style.opacity = 1;
         regionName.textContent = 'Wangshu Inn';
         worldName.style.backgroundColor = 'rgba(255, 189, 66, 0.747)';
         backBackground.style.backgroundImage = 'url(images/liyue-day.webp)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 2) {
         myBackground = document.querySelector('.background-img img:nth-of-type(4)');
-        myBackground.style.opacity = 1;
         regionName.textContent = 'Qingce Village';
         worldName.style.backgroundColor = 'rgba(255, 189, 66, 0.747)';
         backBackground.style.backgroundImage = 'url(images/liyue-night.webp)';
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 3) {
         myBackground = document.querySelector('.background-img img:nth-of-type(5)');
-        myBackground.style.opacity = 1;
         regionName.textContent = 'City of Eternity';
         worldName.style.backgroundColor = 'rgba(250, 55, 205, 0.597)';
         backBackground.style.backgroundImage = 'url(images/inazuma-day.webp)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 3) {
         myBackground = document.querySelector('.background-img img:nth-of-type(6)');
-        myBackground.style.opacity = 1;
         regionName.textContent = 'Amakane Island';
         worldName.style.backgroundColor = 'rgba(250, 55, 205, 0.597)';
         backBackground.style.backgroundImage = 'url(images/inazuma-night.webp)';
     } else if (!document.getElementById('my-checkbox').checked && tabNumber == 4) {
         myBackground = document.querySelector('.background-img img:nth-of-type(7)');
-        myBackground.style.opacity = 1;
         regionName.textContent = 'Liyue Harbour Oceanview';
         worldName.style.backgroundColor = 'white';
         backBackground.style.backgroundImage = 'url(images/more-day.webp)';
     } else if (document.getElementById('my-checkbox').checked && tabNumber == 4) {
         myBackground = document.querySelector('.background-img img:nth-of-type(8)');
-        myBackground.style.opacity = 1;
         regionName.textContent = 'Qingyun Peak';
         worldName.style.backgroundColor = 'white';
         backBackground.style.backgroundImage = 'url(images/more-night.webp)';
     } else {
-        myBackground.style.opacity = 1;
         regionName.textContent = 'Stormbearer Mountains';
         worldName.style.backgroundColor = 'white';
         backBackground.style.backgroundImage = 'url(images/mondstadt-day.webp)';
     }
 
+    myBackground.style.opacity = 1;
+
     recipeController(tabNumber);
 }
+
+// Background Controls: Recipe tab selection
 
 function recipeController(tabNumber) {
     var mondstadt = document.getElementById('mondstadt-recipe');
@@ -124,7 +119,7 @@ function recipeController(tabNumber) {
 
 }
 
-// Audio Controls
+// Audio Controls: Day-Night Cycle
 
 function audioController() {
     if (document.getElementById('my-checkbox').checked === false) {
@@ -133,7 +128,7 @@ function audioController() {
         } else {
             audio.play();
             audio.loop = true;
-            audio.volume = 1.0;
+            audio.volume = 0.5;
             playAudio();
         }
     } else {
@@ -142,11 +137,13 @@ function audioController() {
         } else {
             audioNight.play();
             audioNight.loop = true;
-            audioNight.volume = 0.5;
+            audioNight.volume = 0.3;
             playAudio();
         }
     }
 }
+
+// Audio Controls: Music tab
 
 function playAudio() {
     var clickAudio = new Audio('audio/minecraft-click.mp3');
@@ -154,7 +151,7 @@ function playAudio() {
     clickAudio.currentTime = 0;
     clickAudio.play();
 
-    playImg();
+    playImg(1);
 }
 
 function pauseAudio() {
@@ -166,8 +163,22 @@ function pauseAudio() {
     audio.pause();
     audioNight.pause();
 
-    pauseImg();
+    playImg(0);
 }
+
+function playImg(audioOption) {
+    if (audioOption == 1) {
+        var audioPlayer = document.getElementById('audio-player');
+        audioPlayer.src = 'images/play.webp';
+        audioPlayer.title = 'Pause audio';
+    } else {
+        var audioPlayer = document.getElementById('audio-player');
+        audioPlayer.src = 'images/pause.webp';
+        audioPlayer.title = 'Play audio';
+    }
+}
+
+// Audio Controls: Reset All Audio
 
 function resetAudio() {
     audio.pause();
@@ -175,19 +186,7 @@ function resetAudio() {
     audioNight.pause();
     audioNight.currentTime = 0;
 
-    pauseImg();
-}
-
-function playImg() {
-    var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = 'images/play.webp';
-    audioPlayer.title = 'Pause audio';
-}
-
-function pauseImg() {
-    var audioPlayer = document.getElementById('audio-player');
-    audioPlayer.src = 'images/pause.webp';
-    audioPlayer.title = 'Play audio';
+    playImg(0);
 }
 
 // Day-Night Controls
@@ -248,10 +247,9 @@ function tab(tabNumber) {
         var tpAudio = new Audio('audio/menu.mp3');
         tpAudio.volume = 0.1;
         tpAudio.play();
-
-        dishController(tabNumber);
     }
 
+    dishController(tabNumber);
     backgroundController(tabNumber);
 }
 
@@ -266,39 +264,30 @@ function currentSelectedTab() {
 function dishController(tabNumber) {
     resetDish();
 
+    var dishImage = '';
+    var myDish = '';
+
     if (tabNumber == 1) {
-        var dishImage = document.querySelector('.mondstadt-images .mondstadt-dishes:nth-of-type(' + 1 + ')');
-        dishImage.style.opacity = 1;
-        dishImage.style.zIndex = 1;
-        var myDish = document.querySelector('.mondstadt-description .mondstadt-dishes:nth-of-type(' + 1 + ')');
-        myDish.style.opacity = 1;
-        myDish.style.zIndex = 1;
-
+        dishImage = document.querySelector('.mondstadt-images .mondstadt-dishes:nth-of-type(1)');
+        myDish = document.querySelector('.mondstadt-description .mondstadt-dishes:nth-of-type(1)');
     } else if (tabNumber == 2) {
-        var dishImage = document.querySelector('.liyue-images .liyue-dishes:nth-of-type(' + 1 + ')');
-        dishImage.style.opacity = 1;
-        dishImage.style.zIndex = 1;
-        var myDish = document.querySelector('.liyue-description .liyue-dishes:nth-of-type(' + 1 + ')');
-        myDish.style.opacity = 1;
-        myDish.style.zIndex = 1;
-
+        dishImage = document.querySelector('.liyue-images .liyue-dishes:nth-of-type(1)');
+        myDish = document.querySelector('.liyue-description .liyue-dishes:nth-of-type(1)');
     } else if (tabNumber == 3) {
-        var dishImage = document.querySelector('.inazuma-images .inazuma-dishes:nth-of-type(' + 1 + ')');
-        dishImage.style.opacity = 1;
-        dishImage.style.zIndex = 1;
-        var myDish = document.querySelector('.inazuma-description .inazuma-dishes:nth-of-type(' + 1 + ')');
-        myDish.style.opacity = 1;
-        myDish.style.zIndex = 1;
-
+        dishImage = document.querySelector('.inazuma-images .inazuma-dishes:nth-of-type(1)');
+        myDish = document.querySelector('.inazuma-description .inazuma-dishes:nth-of-type(1)');
     } else if (tabNumber == 4) {
-        var dishImage = document.querySelector('.more-images .more-dishes');
-        dishImage.style.opacity = 1;
-        dishImage.style.zIndex = 1;
-        var myDish = document.querySelector('.more-description .more-dishes');
-        myDish.style.opacity = 1;
-        myDish.style.zIndex = 1;
+        dishImage = document.querySelector('.more-images .more-dishes');
+        myDish = document.querySelector('.more-description .more-dishes');
     }
+
+    dishImage.style.opacity = 1;
+    dishImage.style.zIndex = 1;
+    myDish.style.opacity = 1;
+    myDish.style.zIndex = 1;
 }
+
+// Dish Controls: Reset
 
 function resetDish() {
     document.querySelectorAll('.mondstadt-dishes').forEach(listItem => {
@@ -335,6 +324,8 @@ function resetDish() {
 
 }
 
+// Dish Controls: Mondstadt
+
 function mondstadtDish(dishNumber) {
     var selectedDish = document.querySelector('#mondstadt-recipe li:nth-of-type(' + dishNumber + ')');
     var originalDishID = document.querySelector('#mondstadt-recipe .selected-dish').id;
@@ -365,6 +356,8 @@ function mondstadtDish(dishNumber) {
     myDish.style.zIndex = 1;
 }
 
+// Dish Controls: Liyue
+
 function liyueDish(dishNumber) {
     var selectedDish = document.querySelector('#liyue-recipe li:nth-of-type(' + dishNumber + ')');
     var originalDishID = document.querySelector('#liyue-recipe .selected-dish').id;
@@ -394,6 +387,8 @@ function liyueDish(dishNumber) {
     myDish.style.opacity = 1;
     myDish.style.zIndex = 1;
 }
+
+// Dish Controls: Inazuma
 
 function inazumaDish(dishNumber) {
     var selectedDish = document.querySelector('#inazuma-recipe li:nth-of-type(' + dishNumber + ')');
@@ -426,6 +421,7 @@ function inazumaDish(dishNumber) {
 }
 
 // Browse to recipe page
+
 function browseRecipe(recipeID) {
 
     var locationID = recipeID.charAt(0);

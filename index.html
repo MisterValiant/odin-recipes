@@ -49,6 +49,7 @@
 
     <main id="main-content" class="main-container">
 
+        <!-- Glassmorphism container: light -->
         <div class="recipe-container">
             <section class="main-section">
                 <div class="welcome-container">
@@ -64,6 +65,7 @@
                     <br />
                 </div>
 
+                <!-- Container for Regions and recipes -->
                 <div class="flexbox">
                     <div class="location-container">
                         <nav>
@@ -76,12 +78,18 @@
                         </nav>
                     </div>
 
+                    <!-- Glassmorphism container: dark -->
                     <div class="recipe-details">
                         <div class="recipe-background">
 
+                            <!-- Selected recipe image and description-->
                             <div class="recipe-top">
+
+                                <!-- Selected recipe image -->
                                 <div class="recipe-image">
                                     <div class="image-container">
+
+                                        <!-- Selected recipe image: Mondstadt -->
                                         <div class="mondstadt-images">
                                             <div class="mondstadt-dishes">
                                                 <img width="256" height="256"
@@ -110,6 +118,7 @@
                                             </div>
                                         </div>
 
+                                        <!-- Selected recipe image: Liyue -->
                                         <div class="liyue-images">
                                             <div class="liyue-dishes">
                                                 <img width="256" height="256"
@@ -139,6 +148,7 @@
                                             </div>
                                         </div>
 
+                                        <!-- Selected recipe image: Inazuma -->
                                         <div class="inazuma-images">
                                             <div class="inazuma-dishes">
                                                 <img width="256" height="256"
@@ -167,6 +177,7 @@
                                             </div>
                                         </div>
 
+                                        <!-- Selected recipe image: More -->
                                         <div class="more-images">
                                             <div class="more-dishes">
                                                 <p>Coming</p>
@@ -175,9 +186,12 @@
                                     </div>
                                 </div>
 
+                                <!-- Selected recipe description -->
                                 <div class="recipe-description">
                                     <div class="description-container">
                                         <div class="dish-description">
+
+                                            <!-- Selected recipe description: Mondstadt -->
                                             <div class="mondstadt-description">
                                                 <span class="mondstadt-dishes">
                                                     <p><strong>Mushroom Pizza</strong><br />&nbsp;<br />A pizza
@@ -214,6 +228,7 @@
                                                 </span>
                                             </div>
 
+                                            <!-- Selected recipe description: Liyue -->
                                             <div class="liyue-description">
                                                 <span class="liyue-dishes">
                                                     <p><strong>Rice Pudding</strong><br />&nbsp;<br />A dessert made
@@ -251,6 +266,7 @@
                                                 </span>
                                             </div>
 
+                                            <!-- Selected recipe description: Inazuma -->
                                             <div class="inazuma-description">
                                                 <span class="inazuma-dishes">
                                                     <p><strong>Mixed Yakisoba</strong><br />&nbsp;<br />A mysterious art
@@ -289,6 +305,7 @@
                                                 </span>
                                             </div>
 
+                                            <!-- Selected recipe description: More -->
                                             <div class="more-description">
                                                 <span class="more-dishes">
                                                     <p>Soon...</p>
@@ -299,12 +316,16 @@
                                 </div>
                             </div>
 
+                            <!-- Creates break between top and bottom -->
                             <div class="recipe-break">
                                 <div></div>
                             </div>
 
+                            <!-- Recipes for: Regions -->
                             <div class="recipe-bottom">
                                 <div class="scroll-menu">
+
+                                    <!-- Recipes for: Mondstadt -->
                                     <ul id="mondstadt-recipe">
                                         <li id="dish1" class="selected-dish"><button onclick="mondstadtDish(1)"><img
                                                     width="256" height="256"
@@ -330,6 +351,7 @@
                                         </li>
                                     </ul>
 
+                                    <!-- Recipes for: Liyue -->
                                     <ul id="liyue-recipe">
                                         <li id="dish1" class="selected-dish"><button onclick="liyueDish(1)"><img
                                                     width="256" height="256"
@@ -353,6 +375,7 @@
                                         </li>
                                     </ul>
 
+                                    <!-- Recipes for: Inazuma-->
                                     <ul id="inazuma-recipe">
                                         <li id="dish1" class="selected-dish"><button onclick="inazumaDish(1)"><img
                                                     width="256" height="256"
@@ -385,6 +408,7 @@
             </section>
         </div>
 
+        <!-- Background images -->
         <div class="background-img">
             <img width="1920" height="1080" src="images/mondstadt-day.webp" alt="mondstadt day background" />
             <img width="1920" height="1080" src="images/mondstadt-night.webp" alt="mondstadt night background" />

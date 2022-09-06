@@ -15,16 +15,20 @@ body {
     z-index: 0;
 }
 
-/* Header */
-
-.my-header {
+.my-header, .my-footer {
     background-color: rgba(0, 0, 0, 0.7);
     height: 66px;
     width: 100%;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     position: fixed;
-    top: 0;
+    bottom: 0;
     z-index: 2;
+}
+
+/* Header */
+
+.my-header {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    top: 0;
 }
 
 .my-logo {
@@ -49,6 +53,7 @@ body {
     float: right;
 }
 
+/* Header: Genshin impact Reference */
 .genshin-ref {
     transition: ease-out 0.3s;
     color: black;
@@ -72,7 +77,7 @@ body {
     color: rgb(63, 9, 9);
 }
 
-/** Switch
+/** Header: Switch
    -------------------------------------*/
 .switch-container {
     position: absolute;
@@ -124,12 +129,7 @@ body {
 /* Footer */
 
 .my-footer {
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 66px;
-    width: 100%;
-    position: fixed;
     bottom: 0;
-    z-index: 2;
 }
 
 .socials {
@@ -236,6 +236,7 @@ body {
     opacity: 0;
 }
 
+/* Main: Glassmorphism light */
 .recipe-container {
     position: absolute;
     top: 50%;
@@ -269,6 +270,8 @@ body {
     height: 80%;
     margin-top: 13px;
 }
+
+/* Main: Location */
 
 .location-container {
     width: 10%;
@@ -358,6 +361,8 @@ body {
     padding: 3px;
 }
 
+/* Main: Glassmorphism Dark */
+
 .recipe-details {
     width: 100%;
     height: auto;
@@ -369,6 +374,8 @@ body {
     border: 1px solid rgba(128, 128, 128, 0.307);
     border-radius: 10px;
 }
+
+/* Recipe */
 
 .recipe-background {
     /* background-image: url(../images/background-pattern.jpg);
@@ -401,6 +408,8 @@ body {
     height: auto;
     color: white;
 }
+
+/* Recipe: Bottom */
 
 .scroll-menu {
     display: flex;
@@ -465,6 +474,8 @@ body {
     background-color: rgba(255, 255, 255, 0.89);
 }
 
+/* Recipe: Top */
+
 .mondstadt-images,
 .liyue-images,
 .inazuma-images,
@@ -523,6 +534,8 @@ body {
     background-color: #87CEEB;
 }
 
+/* Recipe: Middle Break */
+
 .recipe-break {
     width: 100%;
     height: 5.3%;
@@ -535,6 +548,8 @@ body {
     height: 6%;
     width: 70%;
 }
+
+/* Recipe Top (Continues) */
 
 .mondstadt-dishes:nth-of-type(n+2),
 .liyue-dishes:nth-of-type(n),
