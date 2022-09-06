@@ -175,9 +175,11 @@ function slideRecipe(action) {
         }
     }
 
-    var audioSlide = new Audio('../audio/slide.wav');
-    audioSlide.volume = 0.3;
-    audioSlide.play();
+    if (audio.paused && audioNight.paused) {
+        var audioSlide = new Audio('../audio/slide.wav');
+        audioSlide.volume = 0.3;
+        audioSlide.play();
+    }
 
     clearCards();
     sliderController();
