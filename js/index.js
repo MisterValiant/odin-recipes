@@ -1,6 +1,5 @@
 var currentTimeInHr = (new Date()).getHours();
-var audio = '';
-var audioNight = '';
+var audio = '', audioNight = '';
 
 window.onload = function () {
     if ((currentTimeInHr >= 6 && currentTimeInHr < 18)) {
@@ -9,11 +8,6 @@ window.onload = function () {
     } else {
         document.getElementById('my-checkbox').checked = true;
         night();
-    }
-
-    if (audio == '' || audioNight == '') {
-        audio = new Audio('audio/genshin-main-theme.mp3');
-        audioNight = new Audio('audio/genshin-qilins-prance.mp3');
     }
 }
 
@@ -127,6 +121,11 @@ function recipeController(tabNumber) {
 // Audio Controls: Day-Night Cycle
 
 function audioController() {
+    if (audio == '' || audioNight == '') {
+        audio = new Audio('audio/genshin-main-theme.mp3');
+        audioNight = new Audio('audio/genshin-qilins-prance.mp3');
+    }
+
     if (document.getElementById('my-checkbox').checked === false) {
         if (!audio.paused) {
             pauseAudio();
@@ -195,6 +194,23 @@ function resetAudio() {
     playImg(0);
 }
 
+// Audio Controls: Dish selected
+
+function dishSelection() {
+    if (audio.paused && audioNight.paused && originalDishID != dishNumber) {
+        var dishAudio = new Audio('audio/select-dish.mp3');
+        dishAudio.volume = 0.08;
+        dishAudio.play();
+    }
+
+    // audio optimised for loading
+    if (audio == '' && audioNight == '') {
+        var dishAudio = new Audio('audio/select-dish.mp3');
+        dishAudio.volume = 0.08;
+        dishAudio.play();
+    }
+}
+
 // Day-Night Controls
 
 function day() {
@@ -250,6 +266,13 @@ function tab(tabNumber) {
     selectedTab.classList.add('selected-li');
 
     if (audio.paused && audioNight.paused && originalTabID != tabNumber) {
+        var tpAudio = new Audio('audio/menu.mp3');
+        tpAudio.volume = 0.1;
+        tpAudio.play();
+    }
+
+    // audio optimised for loading
+    if (audio == '' && audioNight == '') {
         var tpAudio = new Audio('audio/menu.mp3');
         tpAudio.volume = 0.1;
         tpAudio.play();
@@ -343,11 +366,7 @@ function mondstadtDish(dishNumber) {
 
     selectedDish.classList.add('selected-dish');
 
-    if (audio.paused && audioNight.paused && originalDishID != dishNumber) {
-        var dishAudio = new Audio('audio/select-dish.mp3');
-        dishAudio.volume = 0.08;
-        dishAudio.play();
-    }
+    dishSelection();
 
     document.querySelectorAll('.mondstadt-dishes').forEach(listItem => {
         listItem.style.opacity = 0;
@@ -375,11 +394,7 @@ function liyueDish(dishNumber) {
 
     selectedDish.classList.add('selected-dish');
 
-    if (audio.paused && audioNight.paused && originalDishID != dishNumber) {
-        var dishAudio = new Audio('audio/select-dish.mp3');
-        dishAudio.volume = 0.08;
-        dishAudio.play();
-    }
+    dishSelection();
 
     document.querySelectorAll('.liyue-dishes').forEach(listItem => {
         listItem.style.opacity = 0;
@@ -407,11 +422,7 @@ function inazumaDish(dishNumber) {
 
     selectedDish.classList.add('selected-dish');
 
-    if (audio.paused && audioNight.paused && originalDishID != dishNumber) {
-        var dishAudio = new Audio('audio/select-dish.mp3');
-        dishAudio.volume = 0.08;
-        dishAudio.play();
-    }
+    dishSelection();
 
     document.querySelectorAll('.inazuma-dishes').forEach(listItem => {
         listItem.style.opacity = 0;
