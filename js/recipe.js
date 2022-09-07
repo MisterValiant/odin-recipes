@@ -10,16 +10,16 @@ window.onload = function () {
         document.getElementById('my-checkbox').checked = true;
         night();
     }
+
+    if (audio == '' || audioNight == '') {
+        audio = new Audio('../audio/genshin-main-theme.mp3');
+        audioNight = new Audio('../audio/genshin-qilins-prance.mp3');
+    }
 }
 
 // Audio Controls
 
 function audioController() {
-    if (audio == '' || audioNight == '') {
-        audio = new Audio('../audio/genshin-main-theme.mp3');
-        audioNight = new Audio('../audio/genshin-qilins-prance.mp3');
-    }
-
     if (document.getElementById('my-checkbox').checked === false) {
         if (!audio.paused) {
             pauseAudio();

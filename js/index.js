@@ -10,6 +10,11 @@ window.onload = function () {
         document.getElementById('my-checkbox').checked = true;
         night();
     }
+
+    if (audio == '' || audioNight == '') {
+        audio = new Audio('audio/genshin-main-theme.mp3');
+        audioNight = new Audio('audio/genshin-qilins-prance.mp3');
+    }
 }
 
 // Background Controls: Day-Night Cycle
@@ -122,12 +127,6 @@ function recipeController(tabNumber) {
 // Audio Controls: Day-Night Cycle
 
 function audioController() {
-
-    if (audio == '' || audioNight == '') {
-        audio = new Audio('audio/genshin-main-theme.mp3');
-        audioNight = new Audio('audio/genshin-qilins-prance.mp3');
-    }
-
     if (document.getElementById('my-checkbox').checked === false) {
         if (!audio.paused) {
             pauseAudio();
