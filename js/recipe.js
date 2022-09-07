@@ -1,6 +1,6 @@
 var currentTimeInHr = (new Date()).getHours();
-var audio = new Audio('../audio/genshin-main-theme.mp3');
-var audioNight = new Audio('../audio/genshin-qilins-prance.mp3');
+var audio = '';
+var audioNight = '';
 
 window.onload = function () {
     if ((currentTimeInHr >= 6 && currentTimeInHr < 18)) {
@@ -15,6 +15,11 @@ window.onload = function () {
 // Audio Controls
 
 function audioController() {
+    if (audio == '' || audioNight == '') {
+        audio = new Audio('../audio/genshin-main-theme.mp3');
+        audioNight = new Audio('../audio/genshin-qilins-prance.mp3');
+    }
+
     if (document.getElementById('my-checkbox').checked === false) {
         if (!audio.paused) {
             pauseAudio();
