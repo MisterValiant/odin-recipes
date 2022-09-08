@@ -27,7 +27,7 @@ Genshin Impact is an open-world action RPG. Set off on an adventure across Teyva
 <br/>
 
 ## ❤️ Motivation
-The aim this project was to revisit the basics of HTML, CSS and Javascript, and further understand the dos and don'ts of Fullstack Web Development using The Odin Project's (TOP) curriculum. Additionally, I always wanted to re-create Genshin Impacts' character selection page from their [website](https://genshin.hoyoverse.com/en/ "Genshin Impact").
+The aim of this project was to revisit the basics of HTML, CSS and Javascript, and further understand the dos and don'ts of Fullstack Web Development using The Odin Project's (TOP) curriculum. Additionally, I always wanted to re-create Genshin Impacts' character selection page from their [website](https://genshin.hoyoverse.com/en/ "Genshin Impact").
 
 
 <br/>
@@ -62,12 +62,12 @@ Issues:
 ## 🔗 Acknowledgements
 This project was inspired by [Genshin Impact's Character Selection Page](https://genshin.hoyoverse.com/en/ "Genshin Impact")
 
-Sound Effects:
+_Sound Effects:_
 - Minecraft's Click
 - Discord's mute
 - Legend of Zelda BOTW's teleport
 
-Other References:
+_Other References:_
 - In-game pictures
 - [Genshin Impact Wiki](https://genshin-impact.fandom.com/wiki/Genshin_Impact_Wiki "Genshin Impact Wiki")
 - [Genshin Impact Theme](https://www.youtube.com/watch?v=Mcz3yZSUVI8 "Genshin Impact Youtube")
