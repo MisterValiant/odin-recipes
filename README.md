@@ -5,7 +5,7 @@
 <br/>
 
 # 👩‍🍳 Odin Recipes 
-> Odin Recipes provides information on my top&nbsp;  5️⃣&nbsp; best realisable dishes from Genshin Impact.
+> Odin Recipes provides information on my top&nbsp;  5️⃣&nbsp; best realisable dishes from each region in Genshin Impact.
 
 >Live demo:
 [https://mistervaliant.github.io/odin-recipes/](https://mistervaliant.github.io/odin-recipes/ "Odin Recipes")
