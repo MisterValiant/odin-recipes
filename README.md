@@ -1,5 +1,5 @@
 <p align="center">
-  <img width=450px src="images/logo.webp" alt="Odin recipes" title='Odin Recipes'/>
+  <img width=450px src="images/showcase/git-logo.webp" alt="Odin recipes" title='Odin Recipes'/>
 </p>
 
 <br/>
