@@ -1,5 +1,7 @@
 <p align="center">
-  <img width=450px src="images/showcase/git-logo.webp" alt="Odin recipes" title='Odin Recipes'/>
+  <a target='_blank' href='https://mistervaliant.github.io/odin-recipes/'>
+    <img width=450px src="images/showcase/git-logo.webp" alt="Odin recipes" title='Odin Recipes'/>
+  </a>
 </p>
 
 <br/>
@@ -33,7 +35,11 @@ The aim of this project was to revisit the basics of HTML, CSS and Javascript, a
 <br/>
 
 ## 👨‍💻 Technologies Used
-Basic HTML, CSS and JavaScript.
+<div align="left">
+  <img title='HTML' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="42" width="58" alt="HTML5 logo"  />
+  <img title='CSS' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="42" width="58" alt="CSS logo"  />
+  <img title='JavaScript' src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="42" width="58" alt="javaScript logo"  />
+</div>
 
 <br/>
 
