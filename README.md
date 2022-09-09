@@ -29,7 +29,7 @@ Genshin Impact is an open-world action RPG. Set off on an adventure across Teyva
 <br/>
 
 ## ❤️ Motivation
-The aim of this project was to revisit the basics of HTML, CSS and Javascript, and further understand the dos and don'ts of Fullstack Web Development using The Odin Project's (TOP) curriculum. Additionally, I always wanted to re-create Genshin Impacts' character selection page from their [website](https://genshin.hoyoverse.com/en/ "Genshin Impact").
+The aim of this project is to revisit the basics of HTML, CSS and Javascript, and further understand the dos and don'ts of Fullstack Web Development using The Odin Project's (TOP) curriculum. Additionally, I always wanted to re-create Genshin Impacts' character selection page from their [website](https://genshin.hoyoverse.com/en/ "Genshin Impact").
 
 
 <br/>
